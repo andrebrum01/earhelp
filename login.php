@@ -2,7 +2,8 @@
 session_start();
 include("conexao.php");
 if(empty($_POST['email'])||empty($_POST['senha'])){
-    header('Location: index.php');
+	echo "veio vazio";
+    //header('Location: index.php');
     exit();
 }
 $usuario = mysqli_real_escape_string($conexao,$_POST['email']);

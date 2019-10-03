@@ -78,7 +78,7 @@ session_start();
 			unset($_SESSION['naocriado'])
 			?>
 			<div class="inputagem"><label for="email"><img src="img/user.png"></label><input type="email" name="email" id="email" placeholder="Username" required></div>
-			<div class="inputagem"><label for="senha"><img src="img/olho.png"></label><input type="password" name="senha" id="senha" placeholder="Password"></div>
+			<div class="inputagem"><label for="senha" required><img src="img/olho.png"></label><input type="password" name="senha" id="senha" placeholder="Password"></div>
 			<button class="btlogin">Novo Login</button>
 		</form>
 		</div>
