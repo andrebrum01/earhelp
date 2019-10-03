@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("verificar_login.php");
+// include("verificar_login.php");
 ?>
 <!DOCTYPE html>
 <html>
