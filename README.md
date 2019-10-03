@@ -1,1 +1,1 @@
-# https://andrebrum01.github.io/earhelp/
+# https://earhelp.cleverapps.io/index.php
