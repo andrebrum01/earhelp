@@ -13,12 +13,11 @@ $result = mysqli_query($conexao, $query);
 $row = mysqli_num_rows($result);
 if($row == 1){
     $_SESSION['email']= $usuario;
-    echo $_SESSION['email'];
+    echo $conexao;
     //header("location: painel.php");
 }
 else{
 	$_SESSION['nao_autenticado']=true;
-	echo $_SESSION['nao_autenticado'];
-    //header("location: index.php");
+   // header("location: index.php");
 }
 ?>

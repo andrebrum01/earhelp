@@ -1,10 +1,11 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>EAR HELP</title>
+	<?php
+	session_start();
+	?>
+
 </head>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <body>
@@ -41,7 +42,7 @@ session_start();
 			unset($_SESSION['criado']);
 			unset($_SESSION['naocriado'])
 			?>
-			<div class="inputagem"><label for="email"><img src="img/user.png"></label><input type="email" name="email" id="email" placeholder="Username" required></div>
+			<div class="inputagem"><label for="email"><img src="img/user.png"></label><input type="email" name="email" id="email" placeholder="Username"></div>
 			<div class="inputagem"><label for="senha"><img src="img/olho.png"></label><input type="password" name="senha" id="senha" placeholder="Password"></div>
 			<button class="btlogin">Login</button>
 		</form>
