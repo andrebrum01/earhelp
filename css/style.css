@@ -1,0 +1,155 @@
+body,html{
+	margin: 0px auto;
+	padding: 0px auto;
+	font-size: 18px;
+	font-family: sans-serif;
+	width: 100%;
+    height:100%;
+	font-family: 'Indie Flower', cursive;
+
+}
+:root{
+	--backblue:#00121e;
+	--borderInput:#3b8cc6;
+	--backInput:#082336;
+	--azuladao:#3de6af;
+}
+/* sections */
+.firstView{
+	height: 100%;
+	width: 100%;
+	background-color: var(--backblue);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	
+}
+/* caixa do Login */
+.caixaLogin span{
+	padding: 10px;
+	text-transform: uppercase;
+	color: var(--azuladao);
+	top: 5%;
+}
+.caixaLogin{
+	color:var(--borderInput);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-items: center;
+	justify-content: center;
+}
+/* quadrado do login */
+.login{
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--backInput);
+	padding: 15px;
+	display: grid;
+	grid-row-gap: 10px;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+	box-shadow: inset 0px 8px var(--azuladao);
+
+}
+#caixa1{
+	position: absolute;
+	text-align: center;
+}
+#caixa2{
+	position: absolute;
+	text-align: center;
+	visibility: hidden;
+}
+/*mensagems*/
+.erroMessage{
+	background-color: crimson;
+	border-radius: 5px;
+	color:white;
+	padding: 5px;
+}
+.ruim{
+	color: crimson;
+}
+.sucesso{
+	color: #38f252;
+}
+/*os inputs*/
+.inputagem{
+	border-style: solid;
+	border-color:var(--border-color);
+	height: 25px;
+	display: flex;
+	flex-direction: row;
+}
+.login label{
+	width: 25px;
+	height: 25px;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	background: var(--backInput);
+}
+.login input{
+	border: none;
+	width: 100%;
+	text-align: center;
+	background: var(--backInput);
+	color:var(--border-color);
+
+}
+::-webkit-input-placeholder{
+	color:var(--border-color);
+}
+input:-webkit-autofill {
+	background: var(--backInput);
+	color:var(--border-color);
+}
+
+.btlogin{
+	font-style: bold;
+	text-transform: uppercase;
+	color: var(--azuladao);
+	background-color:var(--backblue);
+	border-color: var(--azuladao);
+	border-style: solid;
+	font-size: 12px;
+}
+
+.btlogin:hover{
+	color: var(--backblue);
+	background-color:var(--azuladao);
+	border-color: var(--backblue);
+}
+
+/* escolha login or logout */
+.escolha{
+	position: absolute;
+	top: 5%;
+	right: 5%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	text-align: center;
+	grid-column-gap:10px;
+}
+.selecionado{
+	border:none;
+	background-color: var(--azuladao);
+	color:var(--backblue);
+	padding: 2px;
+}
+.naoSelecionado{
+	border:none;
+	color: var(--azuladao);
+	background-color:var(--backblue);
+	padding: 2px;
+}
+#sel{
+	position: absolute;
+	visibility: hidden;
+}

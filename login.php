@@ -15,6 +15,7 @@ if($row == 1){
     header("location: painel.php");
 }
 else{
+	$_SESSION['nao_autenticado']=true;
     header("location: index.php");
 }
 ?>
