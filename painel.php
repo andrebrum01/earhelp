@@ -1,5 +1,4 @@
 <?php
-session_start();
 include("verificar_login.php");
 ?>
 
@@ -10,7 +9,7 @@ include("verificar_login.php");
 </head>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <body>
-<h2>Bem Vindo, <?php echo $_SESSION['user'];?></h2>
+<h2>Bem Vindo, <?php echo $_GET['user'];?></h2>
 <h2><a href="logout.php">SAIR</a></h2>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
     </script>

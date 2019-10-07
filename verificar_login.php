@@ -1,5 +1,5 @@
 <?php
-if(!$_SESSION['email']){
+if(!$_GET['user']){
     header('Location: index.php');
     exit();
 }
