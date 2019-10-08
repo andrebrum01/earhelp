@@ -8,13 +8,13 @@ $usuario = mysqli_real_escape_string($conexao,$_POST['email']);
 $senha = mysqli_real_escape_string($conexao,$_POST['senha']);
 $user;
 
-$query = "select email,senha from usuario where email='{$usuario}' and senha = md5('{$senha}')";
+$query = "select user,email,senha from usuario where email='{$usuario}' and senha = md5('{$senha}')";
 $result = mysqli_query($conexao, $query);
 
 if(mysqli_num_rows($result) == 1){
 	$user=mysqli_fetch_row($result);
 }
-$query = "select user,senha from usuario where user='{$usuario}' and senha = md5('{$senha}')";
+$query = "select user,email,senha from usuario where user='{$usuario}' and senha = md5('{$senha}')";
 $result = mysqli_query($conexao, $query);
 $row2 = mysqli_num_rows($result);
 
