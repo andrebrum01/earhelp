@@ -39,12 +39,13 @@
 			<div class="inputagem"><label for="email"><img src="img/user.png"></label><input type="text" name="email" id="email" placeholder="Username/Email" required /></div>
 			<div class="inputagem"><label for="senha"><img src="img/olho.png"></label><input type="password" name="senha" id="senha" placeholder="Password"required/></div>
 			<button class="btlogin">Login</button>
+			<p><a class="esq" href="enviaemail.php">Esqueceu a senha?</a></p>
 		</form>
 		</div>
 		<!-- ******************NOVO**LOGIN******************* -->
 		<div id="caixa2">
 		<span id="palavra">Novo login</span>
-		<form id="frm2"class="login" action="new_login.php" method="POST">
+		<form id="frm2"class="addlogin" action="new_login.php" method="POST">
 			<div class="inputagem"><label for="user"><img src="img/user.png"></label><input type="text" name="user" id="user" placeholder="Username" required/></div>
 			<div class="inputagem"><label for="email"><img src="img/user.png"></label><input type="email" name="email" id="email" placeholder="Email" required/></div>
 			<div class="inputagem"><label for="senha" required><img src="img/olho.png"></label><input type="password" name="senha" id="senha" placeholder="Password"/></div>

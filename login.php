@@ -16,7 +16,6 @@ if(mysqli_num_rows($result) == 1){
 }
 $query = "select user,email,senha from usuario where user='{$usuario}' and senha = md5('{$senha}')";
 $result = mysqli_query($conexao, $query);
-$row2 = mysqli_num_rows($result);
 
 if(mysqli_num_rows($result) == 1){
 	$user=mysqli_fetch_row($result);

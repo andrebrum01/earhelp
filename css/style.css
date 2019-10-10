@@ -52,6 +52,19 @@ body,html{
 	display: grid;
 	grid-row-gap: 10px;
 	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+	box-shadow: inset 0px 8px var(--azuladao);
+
+}
+.addlogin{
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--backInput);
+	padding: 15px;
+	display: grid;
+	grid-row-gap: 10px;
+	grid-template-columns: 1fr;
 	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 	box-shadow: inset 0px 8px var(--azuladao);
 
@@ -103,6 +116,23 @@ body,html{
 	color:var(--border-color);
 
 }
+.addlogin label{
+	width: 25px;
+	height: 25px;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	background: var(--backInput);
+}
+.addlogin input{
+	border: none;
+	width: 100%;
+	text-align: center;
+	background: var(--backInput);
+	color:var(--border-color);
+
+}
 ::-webkit-input-placeholder{
 	color:var(--border-color);
 }
@@ -126,7 +156,10 @@ input:-webkit-autofill {
 	background-color:var(--azuladao);
 	border-color: var(--backblue);
 }
-
+.esq{
+	font-size: 12px;
+	color:var(--azuladao);
+}
 /* escolha login or logout */
 .escolha{
 	position: absolute;
