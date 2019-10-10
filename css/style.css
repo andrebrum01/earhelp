@@ -186,3 +186,21 @@ input:-webkit-autofill {
 	position: absolute;
 	visibility: hidden;
 }
+.back{
+	font-style: bold;
+	text-transform: uppercase;
+	color: var(--azuladao);
+	background-color:var(--backblue);
+	border-color: var(--azuladao);
+	border-style: solid;
+	font-size: 12px;
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.back:hover{
+	color: var(--backblue);
+	background-color:var(--azuladao);
+	border-color: var(--backblue);
+}
