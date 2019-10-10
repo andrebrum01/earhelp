@@ -1,18 +1,16 @@
 <?php
 include("conexao.php");
 $usuario = mysqli_real_escape_string($conexao,$_POST['email']);
-$query = "select * from usuario where user='{$usuario}'";
+$query = "select email,senha,user from usuario where user='{$usuario}'";
 $result = mysqli_query($conexao, $query);
 if(!mysqli_num_rows($result) == 1){
-	$query = "select * from usuario where email='{$usuario}'";
+	$query = "select email,senha,user from usuario where email='{$usuario}'";
 	$result = mysqli_query($conexao, $query);
 	if(!mysqli_num_rows($result) == 1){
 		header('Location: index.php');
     	exit();
 	}
 }
-$query = "select email,senha,user from usuario where user='{$usuario}'";
-$result = mysqli_query($conexao, $query);
 if(mysqli_num_rows($result) == 1){
 	$usuario=mysqli_fetch_row($result);
 	$email = $usuario[0];
@@ -28,7 +26,4 @@ if(mysqli_num_rows($result) == 1){
 	else
 	 	echo "A mensagem não pode ser enviada";
 	}
-else{
-    echo "email não existe";
-}
 ?>
