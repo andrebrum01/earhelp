@@ -29,6 +29,6 @@ if(mysqli_num_rows($result) == 1){
 	 	echo "A mensagem não pode ser enviada";
 	}
 else{
-    echo "deu ruim";
+    echo "email não existe";
 }
 ?>
