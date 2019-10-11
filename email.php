@@ -7,7 +7,7 @@ if(!mysqli_num_rows($result) == 1){
 	$query = "select email,senha,user from usuario where email='{$usuario}'";
 	$result = mysqli_query($conexao, $query);
 	if(!mysqli_num_rows($result) == 1){
-		header('Location: index.php');
+		header('Location: enviaemail.php');
     	exit();
 	}
 }
@@ -19,7 +19,7 @@ if(mysqli_num_rows($result) == 1){
 	$headers = "MIME-Version: 1.1\r\n";
 	$headers .= "Content-type: text/html; charset=UTF-8\r\n";
 	$headers .= "From: fmm.earhelp@gmail.com\r\n"; // remetente
-	$envio=mail($email,"Esqueceu a senha do EAR HELP?","Caro <b>$usuario</b> sua senha é $senha",$headers);
+	$envio=mail($email,"Esqueceu a senha do EAR HELP?","Caro $usuario sua senha é $senha",$headers);
 	if($envio)
 	 	echo "Mensagem enviada com sucesso";
 	else
