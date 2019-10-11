@@ -25,7 +25,7 @@ $mail->Charset='UTF-8';
 $mail->SMTPAuth = true;
 $mail->SMTPSecure ='ssl';
 $mail-> Host='earhelp.cleverapps.io';
-$mail->Port=25;
+$mail->Port=20;
 $mail->Username='fmm.earhelp@gmail.com';
 $mail->Password ='nescutoprr';
 $mail->From='fmm.earhelp@gmail.com';
@@ -39,6 +39,5 @@ if($mail->Send()){
 }else{
 	echo "Erro no envio do e-mail: " . $mail->ErrorInfo;
 }
-
 
 ?>
