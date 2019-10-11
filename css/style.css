@@ -18,6 +18,7 @@ body,html{
 .firstView{
 	height: 100%;
 	width: 100%;
+	/*background-image: url('../img/earhelp.png');*/
 	background-color: var(--backblue);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -25,7 +26,6 @@ body,html{
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	
 }
 /* caixa do Login */
 .caixaLogin span{
@@ -85,11 +85,11 @@ body,html{
 	color:white;
 	padding: 5px;
 }
-.ruim{
-	color: crimson;
-}
 .sucesso{
-	color: #38f252;
+	background-color: #38f252;
+	border-radius: 5px;
+	color:white;
+	padding: 5px;
 }
 /*os inputs*/
 .inputagem{
@@ -185,22 +185,4 @@ input:-webkit-autofill {
 #sel{
 	position: absolute;
 	visibility: hidden;
-}
-.back{
-	font-style: bold;
-	text-transform: uppercase;
-	color: var(--azuladao);
-	background-color:var(--backblue);
-	border-color: var(--azuladao);
-	border-style: solid;
-	font-size: 12px;
-	text-decoration: none;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.back:hover{
-	color: var(--backblue);
-	background-color:var(--azuladao);
-	border-color: var(--backblue);
 }

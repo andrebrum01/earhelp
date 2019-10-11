@@ -1,0 +1,107 @@
+body,html{
+	margin: 0px auto;
+	padding: 0px auto;
+	font-size: 18px;
+	font-family: sans-serif;
+	width: 100%;
+    height:100%;
+	font-family: 'Indie Flower', cursive;
+	color: white;
+}
+:root{
+	--backblue:#00121e;
+	--borderInput:#3b8cc6;
+	--backInput:#082336;
+	--azuladao:#3de6af;
+}
+/*section*/
+.firstView{
+	height: 100%;
+	width: 100%;
+	background-color: var(--backblue);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	margin: 0px;
+	display:flex;
+}
+/*nav bar*/
+.nav{
+	background-color: var(--backInput);
+	margin: 0px;
+	height: 80px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+div.btsair{
+	position: absolute;
+	right: 5px;
+	background-color: white;
+	padding: 5px;
+	border:green;
+	border-width: 2px;
+}
+a.btsair{
+	text-decoration: none;
+	color:var(--backInput);
+}
+div.btsair:hover{
+	background-color: var(--backInput);
+	border:white;
+}
+div.btsair:hover  a.btsair{
+	text-decoration: none;
+	color:white;
+	
+}
+.nameUser{
+	color:white;
+	margin-left: 5px;
+}
+/*div caixa*/
+.caixa{
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto 1fr;
+}
+.titulo{
+	font-size: 28px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+.conteudo{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.teste{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/*testes*/
+.next{
+	position: absolute;
+	visibility: hidden;
+}
+.btPlay{
+	position: absolute;
+}
+.teste1{
+	visibility: hidden;
+	position: absolute;
+}
+#next:checked ~ #teste1{
+	visibility: visible;
+	position: absolute;
+}
+#next:checked ~ #btPlay{
+	background-color: red;
+	visibility: hidden;
+	position: absolute;
+}

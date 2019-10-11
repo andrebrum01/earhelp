@@ -20,7 +20,7 @@
 				}
 				if(isset($_GET['naocriado'])){
 			?>
-			<div class="ruim">Usuário já existe !</div>
+			<div class="erroMessage">Usuário já existe !</div>
 			<?php
 				}				
 			?>
@@ -53,6 +53,7 @@
 		</form>
 		</div>
 	</div>
+	<!-- login or logout -->
 	<button id="sel">a</button>
 	<label for="sel">
 	<div class="escolha">
