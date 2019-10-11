@@ -39,7 +39,6 @@
 			<div class="inputagem"><label for="email"><img src="img/user.png"></label><input type="text" name="email" id="email" placeholder="Username/Email" required /></div>
 			<div class="inputagem"><label for="senha"><img src="img/olho.png"></label><input type="password" name="senha" id="senha" placeholder="Password"required/></div>
 			<button class="btlogin">Login</button>
-			<p><a class="esq" href="enviaemail.php">Esqueceu a senha?</a></p>
 		</form>
 		</div>
 		<!-- ******************NOVO**LOGIN******************* -->
