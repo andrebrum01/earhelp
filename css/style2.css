@@ -80,6 +80,9 @@ div.btsair:hover  a.btsair{
 	align-items: center;
 }
 .teste{
+	height: 100%;
+	width: 100%;
+	position: absolute;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -90,11 +93,22 @@ div.btsair:hover  a.btsair{
 	visibility: hidden;
 }
 .btPlay{
+	height: 100%;
+	width: 100%;
 	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .teste1{
-	visibility: hidden;
+	height: 100%;
+	width: 100%;
 	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	visibility: hidden;
+	background-color: rgba(0,0,0,0.5);
 }
 #next:checked ~ #teste1{
 	visibility: visible;
@@ -104,4 +118,12 @@ div.btsair:hover  a.btsair{
 	background-color: red;
 	visibility: hidden;
 	position: absolute;
+}
+.back{
+	position: absolute;
+	top:2%;
+	right: 2%;
+}
+img{
+	cursor: pointer;
 }

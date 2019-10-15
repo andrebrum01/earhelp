@@ -19,16 +19,16 @@ include("verificar_login.php");
 		<div class="conteudo">Faça o teste para verificar sua audição.</div>
 		<div id ="teste"class="teste">
 			<input type="checkbox" id="next" class="next">
-			<div id="btPlay" class="btPlay">
-			<label for="next">
-			<img src="img/play.png"></img>
-			</label>
-			</div>
-			<div id="teste1" class="teste1">
-			<label for="next">
-			
-			</label>
-			</div>
+			<section id="btPlay" class="btPlay">
+				<label for="next">
+				<img src="img/play.png"></img>
+				</label>
+			</section>
+			<section id="teste1" class="teste1">
+				<label for="next">
+				<div class="back"><img src="img/back.png"></img></div>
+				</label>
+			</section>
 		</div>
 	</div>
 </section>
