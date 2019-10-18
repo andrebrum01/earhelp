@@ -8,22 +8,15 @@ body,html{
 	font-family: 'Indie Flower', cursive;
 	color: white;
 }
+body{
+	overflow-x: hidden;
+	height: auto;
+}
 :root{
 	--backblue:#00121e;
 	--borderInput:#3b8cc6;
 	--backInput:#082336;
 	--azuladao:#3de6af;
-}
-/*section*/
-.firstView{
-	height: 100%;
-	width: 100%;
-	background-color: var(--backblue);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	margin: 0px;
-	display:flex;
 }
 /*nav bar*/
 .nav{
@@ -59,6 +52,14 @@ div.btsair:hover  a.btsair{
 	color:white;
 	margin-left: 5px;
 }
+/*firstView*/
+.firstView{
+	height: 100%;
+	width: 100%;
+	background-color: var(--backblue);
+	display:flex;
+	position: absolute;
+}
 /*div caixa*/
 .caixa{
 	width: 100%;
@@ -87,11 +88,6 @@ div.btsair:hover  a.btsair{
 	justify-content: center;
 	align-items: center;
 }
-/*testes*/
-.next{
-	position: absolute;
-	visibility: hidden;
-}
 .btPlay{
 	height: 100%;
 	width: 100%;
@@ -100,91 +96,10 @@ div.btsair:hover  a.btsair{
 	justify-content: center;
 	align-items: center;
 }
-.teste1{
-	height: 100%;
-	width: 100%;
-	position: absolute;
-	display: flex;
-	flex-direction: column;
-	visibility: hidden;
-	background-color: rgba(0,0,0,0.5);
-	z-index: 1;
-}
-.back{
-	position: absolute;
-	top:2%;
-	right: 2%;
-	z-index: 1;
-}
-img{
-	cursor: pointer;
-}
-/*check*/
-#next:checked ~ #teste1{
-	visibility: visible;
-	position: absolute;
-}
-#next:checked ~ .boas{
-	visibility: visible;
-	position: absolute;
-}
-#next:checked ~ #btPlay{
-	background-color: red;
-	visibility: hidden;
-	position: absolute;
-}
-/*progress*/
-#sons{
-	z-index: 0;
-	height: 100%;
-	width: 100%;
-	background-color: white;
-}
-.cx{
-	height: 100%;
-	width: 100%;
-	position: absolute;
-	display: flex;
-	visibility: hidden;
-}
-.visible{
-	/*visibility: visible;*/
-}
-.blue{
-	background-color: blue;
-}
-.red{
-	background-color: red
-}
-.purple{
-	background-color: purple;
-}
-#caixaProgress{
-	z-index: 1;
-	height: 50px;
-	width: 100%;
-	display: grid;
-	grid-template-rows: 1fr;
-	grid-template-columns: auto auto auto auto;
-	column-gap: 10px;
-	align-items: center;
-	justify-content: center;
-}
-span{
-	background-color: white;
-	height: 10px;
-	width: 10px;
-	border-radius: 100%;
-}
-.select{
-	background-color: var(--azuladao);
-}
 /* caixa boas praticas*/
 .boas{
 	position: absolute;
-	top: 0px;
-	left: 0px;
-	z-index: 2;
+	z-index: 3;
 	height: 100%;
 	width: 100%;
 	overflow:hidden;
@@ -195,20 +110,12 @@ span{
 	flex-direction: row;
 	visibility: hidden;
 }
-.close{
-	visibility: hidden;
-	position: absolute;
-}
-#close:checked ~ .boas{
-	visibility: hidden;
-	position: absolute;
-}
 .fecha{
 	position: absolute;
 	right: 2%;
 	top: 2%;
 }
-/*boas praticas*/
+/*primeira caixa*/
 .primeira{
 	height: 100%;
 	width: 100%;
@@ -233,4 +140,113 @@ span{
 	font-size: 32px;
 	border-radius: 20px;
 	cursor: pointer; 
+}
+
+/*area de teste*/
+.teste1{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	visibility: hidden;
+	background-color: white;
+	z-index: 1;
+	overflow: hidden;
+}
+.back{
+	position: absolute;
+	top:2%;
+	right: 2%;
+	z-index: 3;
+}
+#sons{
+	z-index: 1;
+	height: 100%;
+	width: 300%;
+	background-color: white;
+	overflow: hidden;
+	display: flex;
+	flex-direction: row;
+}
+#blue{
+	z-index: 1;
+	display: flex;
+	height: 100%;
+	width: 100%;
+	background-color: blue;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#red{
+	z-index: 1;
+	display: flex;
+	height: 100%;
+	width: 100%;
+	background-color: red;
+	justify-content: center;
+	align-items: center;
+}
+#purple{
+	z-index: 1;
+	display: flex;
+	height: 100%;
+	width: 100%;
+	background-color: purple;
+	justify-content: center;
+	align-items: center;
+}
+/*progress*/
+#caixaProgress{
+	z-index: 1;
+	height: 50px;
+	width: 100%;
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: auto auto auto;
+	column-gap: 10px;
+	align-items: center;
+	justify-content: center;
+}
+.select{
+	background-color: var(--azuladao);
+}
+.ouviu{
+
+}
+
+/*add*/
+span{
+	background-color: var(--backInput);
+	height: 10px;
+	width: 10px;
+	border-radius: 100%;
+}
+img{
+	cursor: pointer;
+}
+/*check*/
+#next:checked ~ .teste1{
+	visibility: visible;
+	position: absolute;
+}
+#next:checked ~ .boas{
+	visibility: visible;
+	position: absolute;
+}
+#next:checked ~ .firstView{
+	visibility: hidden;
+	position: absolute;
+}
+#close:checked ~ .boas{
+	visibility: hidden;
+	position: absolute;
+}
+#next{
+	position: absolute;
+	visibility: hidden;
+}
+#close{
+	visibility: hidden;
+	position: absolute;
 }
