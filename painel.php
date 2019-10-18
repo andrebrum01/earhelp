@@ -26,7 +26,8 @@ include("verificar_login.php");
 				</label>
 				<div class="primeira">
 					<h1>Coloque seu fones de ouvidos</h1>
-					<img></img>
+					<div><img src="img/fone.png"></img>
+					</div>
 					<div class="sel">></div>
 				</div>
 			</section>
