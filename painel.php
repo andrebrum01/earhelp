@@ -19,26 +19,32 @@ include("verificar_login.php");
 		<div class="conteudo">Faça o teste para verificar sua audição.</div>
 		<div id ="teste"class="teste">
 			<input type="checkbox" id="next" class="next">
+			<input type="checkbox" id="close" class="close">
+			<section id="boas" class="boas">
+				<label for="close">
+					<div class="fecha"><img src="img/close.png"></img></div>
+				</label>
+				<div class="primeira">
+					<h1>Coloque seu fones de ouvidos</h1>
+					<img></img>
+					<div class="sel">></div>
+				</div>
+			</section>
+
 			<section id="btPlay" class="btPlay">
 				<label for="next">
 				<img src="img/play.png"></img>
 				</label>
 			</section>
+
 			<section id="teste1" class="teste1">
 				<label for="next">
 					<div class="back"><img src="img/back.png"></img></div>
 				</label>
-				<input type="checkbox" id="close" class="close">
-				<div class="full">
-					<label for="close">
-						<div class="fecha"><img src="img/close.png"></img></div>
-						<h1>Verifique se os fones de ouvido estão colocados corretamente</h1>
-					</label>
-				</div>
 				<div id="sons">
-					<div></div>
-					<div></div>
-					<div id="select"></div>
+					<div class="cx blue"></div>
+					<div class="cx red"></div>
+					<div class="cx purple"></div>
 				</div>
 				<div id="caixaProgress">
 				</div>

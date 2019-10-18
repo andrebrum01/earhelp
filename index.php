@@ -54,7 +54,7 @@
 		</div>
 	</div>
 	<!-- login or logout -->
-	<button id="sel">a</button>
+	<button id="sel"></button>
 	<label for="sel">
 	<div class="escolha">
 		<div id="clickLogin" class="selecionado">Sign In</div>
