@@ -1,7 +1,7 @@
 body,html{
 	margin: 0px auto;
 	padding: 0px auto;
-	font-size: 3vw;
+	font-size: 2vw;
 	font-family: sans-serif;
 	width: 100%;
     height:100%;
@@ -69,7 +69,7 @@ div.btsair:hover  a.btsair{
 	grid-template-rows: auto auto 1fr;
 }
 .titulo{
-	font-size: 3.5vw;
+	font-size: 3vw;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -114,6 +114,15 @@ div.btsair:hover  a.btsair{
 	position: absolute;
 	right: 2%;
 	top: 2%;
+	z-index: 4;
+}
+/* caixao da dicas*/
+.boxDica{
+	position: absolute;
+	height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: row;
 }
 /*primeira caixa*/
 .primeira{
@@ -129,7 +138,7 @@ div.btsair:hover  a.btsair{
 	width: 90%;
 	justify-self:center;
 }
-.sel{
+.seg{
 	display: flex;
 	justify-self:center;
 	justify-content: center;
@@ -137,6 +146,23 @@ div.btsair:hover  a.btsair{
 	background-color: var(--azuladao);
 	width: 30%;
 	height: 30%;
+	font-size: 32px;
+	border-radius: 20px;
+	cursor: pointer; 
+}
+.primeira label{
+	justify-self:center;
+	width: 30%;
+	height: 30%;
+}
+.primeira label .seg{
+	display: flex;
+	justify-self:center;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--azuladao);
+	width: 100%;
+	height: 100%;
 	font-size: 32px;
 	border-radius: 20px;
 	cursor: pointer; 
@@ -253,8 +279,11 @@ img{
 
 /*responsvidade*/
 @media only screen and (max-width: 800px){
-*{
+body,html{
 	font-family: arial;
-	font-size: 32px;
+	font-size: 4vw;
+}
+.titulo{
+	font-size: 4.5vw;
 }
 } 

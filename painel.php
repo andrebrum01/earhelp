@@ -32,11 +32,27 @@ include("verificar_login.php");
 		<label for="close">
 			<div class="fecha"><img src="img/close.png"></img></div>
 		</label>
-		<div class="primeira">
-			<h1>Coloque seu fones de ouvidos</h1>
-			<div><img src="img/fone.png"></img>
+		<div class="boxDica">
+			<div class="primeira eu">
+				<h1>Coloque seu fones de ouvidos</h1>
+				<div><img src="img/fone.png"></img>
+				</div>
+				<div class="seg">Seguinte ></div>
 			</div>
-			<div class="sel">Seguinte ></div>
+			<div class="primeira">
+				<h1>Configure o volume do seu dispositivo para 50%</h1>
+				<div><img src="img/som.png"></img>
+				</div>
+				<div class="seg">Seguinte ></div>
+			</div>
+			<div class="primeira">
+				<h1>Certifique-se de que esteja em um ambiente calmo</h1>
+				<div><img src="img/silent.png"></img>
+				</div>
+				<label for="close">
+					<div class="seg">Pronto</div>
+				</label>
+			</div>
 		</div>
 	</section>
 
