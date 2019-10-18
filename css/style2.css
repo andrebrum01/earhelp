@@ -168,7 +168,6 @@ span .select{
 	width: 100%;
 	overflow:hidden;
 	background-color: white;
-	padding-top:5%;
 	color: var(--backInput);
 }
 .close{
