@@ -108,8 +108,23 @@ div.btsair:hover  a.btsair{
 	flex-direction: column;
 	visibility: hidden;
 	background-color: rgba(0,0,0,0.5);
+	z-index: 1;
 }
+.back{
+	position: absolute;
+	top:2%;
+	right: 2%;
+	z-index: 1;
+}
+img{
+	cursor: pointer;
+}
+/*check*/
 #next:checked ~ #teste1{
+	visibility: visible;
+	position: absolute;
+}
+#next:checked ~ .boas{
 	visibility: visible;
 	position: absolute;
 }
@@ -118,28 +133,33 @@ div.btsair:hover  a.btsair{
 	visibility: hidden;
 	position: absolute;
 }
-.back{
-	position: absolute;
-	top:2%;
-	right: 2%;
-}
-img{
-	cursor: pointer;
-}
 /*progress*/
 #sons{
+	z-index: 0;
 	height: 100%;
 	width: 100%;
 	background-color: white;
 }
-#sons div{
+.cx{
 	height: 100%;
 	width: 100%;
 	position: absolute;
-	visibility: hidden;
-	background-color: red;
+	display: flex;
+}
+.visible{
+	/*visibility: visible;*/
+}
+.blue{
+	background-color: blue;
+}
+.red{
+	background-color: red
+}
+.purple{
+	background-color: purple;
 }
 #caixaProgress{
+	z-index: 1;
 	height: 50px;
 	width: 100%;
 	display: grid;
@@ -155,11 +175,11 @@ span{
 	width: 10px;
 	border-radius: 100%;
 }
-span .select{
+.select{
 	background-color: var(--azuladao);
 }
-/* boas praticas*/
-.full{
+/* caixa boas praticas*/
+.boas{
 	position: absolute;
 	top: 0px;
 	left: 0px;
@@ -169,12 +189,16 @@ span .select{
 	overflow:hidden;
 	background-color: white;
 	color: var(--backInput);
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	visibility: hidden;
 }
 .close{
 	visibility: hidden;
 	position: absolute;
 }
-#close:checked ~ .full{
+#close:checked ~ .boas{
 	visibility: hidden;
 	position: absolute;
 }
@@ -182,4 +206,15 @@ span .select{
 	position: absolute;
 	right: 2%;
 	top: 2%;
+}
+/*boas praticas*/
+.primeira{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.primeira h1{
+	width: 90%;
 }
