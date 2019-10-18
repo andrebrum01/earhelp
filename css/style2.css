@@ -1,7 +1,7 @@
 body,html{
 	margin: 0px auto;
 	padding: 0px auto;
-	font-size: 18px;
+	font-size: 3vw;
 	font-family: sans-serif;
 	width: 100%;
     height:100%;
@@ -69,7 +69,7 @@ div.btsair:hover  a.btsair{
 	grid-template-rows: auto auto 1fr;
 }
 .titulo{
-	font-size: 28px;
+	font-size: 3.5vw;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -255,8 +255,6 @@ img{
 @media only screen and (max-width: 800px){
 *{
 	font-family: arial;
-}
-#sons{
 	font-size: 32px;
 }
 } 
