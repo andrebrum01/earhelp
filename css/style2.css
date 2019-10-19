@@ -193,32 +193,15 @@ div.btsair:hover  a.btsair{
 	overflow: hidden;
 	display: flex;
 	flex-direction: row;
+	color: var(--backInput);
 }
-#blue{
+#boxFrequencia{
 	z-index: 1;
-	display: flex;
 	height: 100%;
 	width: 100%;
-	background-color: blue;
+	background-color: white;
 	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-#red{
-	z-index: 1;
-	display: flex;
-	height: 100%;
-	width: 100%;
-	background-color: red;
-	justify-content: center;
-	align-items: center;
-}
-#purple{
-	z-index: 1;
-	display: flex;
-	height: 100%;
-	width: 100%;
-	background-color: purple;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
@@ -229,7 +212,7 @@ div.btsair:hover  a.btsair{
 	width: 100%;
 	display: grid;
 	grid-template-rows: 1fr;
-	grid-template-columns: auto auto auto;
+	grid-template-columns: auto auto auto auto auto auto;
 	column-gap: 10px;
 	align-items: center;
 	justify-content: center;

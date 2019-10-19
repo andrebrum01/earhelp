@@ -62,14 +62,35 @@ include("verificar_login.php");
 			<div class="back"><img src="img/back.png"></img></div>
 		</label>
 		<div id="sons">
-			<div id="blue">
-				<div class="ouviu">:)</div>
+			<!-- 125 -->
+			<div id="boxFrequencia">
+				<h1>Frequência de 125</h1>
+				<div class="ouviu"><img src="img/play.png"></img></div>
 			</div>
-			<div id="red">
-				<div class="ouviu">:)</div>
+			<!-- 250 -->
+			<div id="boxFrequencia">
+				<h1>Frequência de 250</h1>
+				<div class="ouviu"><img src="img/play.png"></img></div>
 			</div>
-			<div id="purple">
-				<div class="ouviu">:)</div>
+			<!-- 500 -->
+			<div id="boxFrequencia">
+				<h1>Frequência de 500</h1>
+				<div class="ouviu"><img src="img/play.png"></img></div>
+			</div>
+			<!-- 1000 -->
+			<div id="boxFrequencia">
+				<h1>Frequência de 1000</h1>
+				<div class="ouviu"><img src="img/play.png"></img></div>
+			</div>
+			<!-- 2000 -->
+			<div id="boxFrequencia">
+				<h1>Frequência de 2000</h1>
+				<div class="ouviu"><img src="img/play.png"></img></div>
+			</div>
+			<!-- 4000 -->
+			<div id="boxFrequencia">
+				<h1>Frequência de 4000</h1>
+				<div class="ouviu"><img src="img/play.png"></img></div>
 			</div>
 		</div>
 		<div id="caixaProgress"/>
