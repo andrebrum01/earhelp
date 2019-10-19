@@ -40,7 +40,7 @@ include("verificar_login.php");
 				<div class="seg">Seguinte ></div>
 			</div>
 			<div class="primeira">
-				<h1>Configure o volume do seu dispositivo para 50%</h1>
+				<h1>Configure o volume do seu dispositivo para 100%</h1>
 				<div><img src="img/som.png"></img>
 				</div>
 				<div class="seg">Seguinte ></div>
