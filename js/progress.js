@@ -6,6 +6,7 @@
 	$("#caixaProgress").append("<span></span>");
 	}
 	$("#caixaProgress").children().eq(0).addClass('select');
+	index = $("#caixaProgress .select").index();
 // add largura no coisa
 	$("#sons").css({
 		width:"calc(100%*"+progress+")"
@@ -15,6 +16,7 @@
 		$("#caixaProgress").children().eq(index).removeClass('select');
 		index++;
 		if(index==progress) index=0;
+
 		$("#sons").css({
 			transform: "translateX(calc(calc(-100%/"+progress+")*"+index+"))"
 		});
@@ -37,3 +39,7 @@
 			transform: "translateX(calc(calc(-100%/"+progress2+")*"+index2+"))"
 		});
 	});
+//aaaaaaaaaaaaa
+	$(".buttonMais").height( $(".buttonMais").width());
+	$(".buttonMenos").width( $(".buttonMais").width());
+	$(".buttonMenos").height( $(".buttonMais").width());

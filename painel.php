@@ -64,33 +64,87 @@ include("verificar_login.php");
 		<div id="sons">
 			<!-- 125 -->
 			<div id="boxFrequencia">
+				<input type="checkbox" id="f125">
 				<h1>Frequência de 125</h1>
-				<div class="ouviu"><img src="img/play.png"></img></div>
+				<label class="start125" for="f125">
+						<div><img src="img/play.png"></img></div>
+				</label>
+				<div class="comecou125">
+					<div class="db">0</div>
+					<div class="buttonMais">+</div>
+					<div class="ouviu">Pause</div>
+					<div class="buttonMenos">-</div>
+				</div>
 			</div>
 			<!-- 250 -->
 			<div id="boxFrequencia">
+				<input type="checkbox" id="f250">
 				<h1>Frequência de 250</h1>
-				<div class="ouviu"><img src="img/play.png"></img></div>
+				<label class="start250" for="f250">
+						<div><img src="img/play.png"></img></div>
+				</label>
+				<div class="comecou250">
+					<div class="db">0</div>
+					<div class="buttonMais">+</div>
+					<div class="ouviu">Pause</div>
+					<div class="buttonMenos">-</div>
+				</div>
 			</div>
 			<!-- 500 -->
 			<div id="boxFrequencia">
+				<input type="checkbox" id="f500">
 				<h1>Frequência de 500</h1>
-				<div class="ouviu"><img src="img/play.png"></img></div>
+				<label class="start500" for="f500">
+						<div><img src="img/play.png"></img></div>
+				</label>
+				<div class="comecou500">
+					<div class="db">0</div>
+					<div class="buttonMais">+</div>
+					<div class="ouviu">Pause</div>
+					<div class="buttonMenos">-</div>
+				</div>
 			</div>
 			<!-- 1000 -->
 			<div id="boxFrequencia">
+				<input type="checkbox" id="f1000">
 				<h1>Frequência de 1000</h1>
-				<div class="ouviu"><img src="img/play.png"></img></div>
+				<label class="start1000" for="f1000">
+						<div><img src="img/play.png"></img></div>
+				</label>
+				<div class="comecou1000">
+					<div class="db">0</div>
+					<div class="buttonMais">+</div>
+					<div class="ouviu">Pause</div>
+					<div class="buttonMenos">-</div>
+				</div>
 			</div>
 			<!-- 2000 -->
 			<div id="boxFrequencia">
+				<input type="checkbox" id="f2000">
 				<h1>Frequência de 2000</h1>
-				<div class="ouviu"><img src="img/play.png"></img></div>
+				<label class="start2000" for="f2000">
+						<div><img src="img/play.png"></img></div>
+				</label>
+				<div class="comecou2000">
+					<div class="db">0</div>
+					<div class="buttonMais">+</div>
+					<div class="ouviu">Pause</div>
+					<div class="buttonMenos">-</div>
+				</div>
 			</div>
 			<!-- 4000 -->
 			<div id="boxFrequencia">
+				<input type="checkbox" id="f4000">
 				<h1>Frequência de 4000</h1>
-				<div class="ouviu"><img src="img/play.png"></img></div>
+				<label class="start4000" for="f4000">
+						<div><img src="img/play.png"></img></div>
+				</label>
+				<div class="comecou4000">
+					<div class="db">0</div>
+					<div class="buttonMais">+</div>
+					<div class="ouviu">Pause</div>
+					<div class="buttonMenos">-</div>
+				</div>
 			</div>
 		</div>
 		<div id="caixaProgress"/>

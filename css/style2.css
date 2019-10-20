@@ -12,11 +12,23 @@ body{
 	overflow-x: hidden;
 	height: auto;
 }
+@keyframes pulse{
+	0% {
+    transform: scale(1);
+  }
+  	50% {
+    transform: scale(1.1);
+  }
+  	100% {
+    transform: scale(1);
+  }
+}
 :root{
 	--backblue:#00121e;
 	--borderInput:#3b8cc6;
 	--backInput:#082336;
 	--azuladao:#3de6af;
+	--tamButton:80px;
 }
 /*nav bar*/
 .nav{
@@ -199,40 +211,126 @@ div.btsair:hover  a.btsair{
 	z-index: 1;
 	height: 100%;
 	width: 100%;
-	background-color: white;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	background-color: white;
 }
-/*progress*/
-#caixaProgress{
-	z-index: 1;
-	height: 50px;
+/*testes auditivos de cada frenquencia*/
+.start125{
+	height: 100%;
 	width: 100%;
-	display: grid;
-	grid-template-rows: 1fr;
-	grid-template-columns: auto auto auto auto auto auto;
-	column-gap: 10px;
+	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	overflow: hidden;
 }
-.select{
-	background-color: var(--azuladao);
+.comecou125{
+	height: 100%;
+	width: 100%;
+	display: none;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	justify-items:center;
+	align-items: center;
+	overflow: hidden;
 }
-.ouviu{
-
+.start250{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
 }
-
-/*add*/
-span{
-	background-color: var(--backInput);
-	height: 10px;
-	width: 10px;
-	border-radius: 100%;
+.comecou250{
+	height: 100%;
+	width: 100%;
+	display: none;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	justify-items:center;
+	align-items: center;
+	overflow: hidden;
 }
-img{
-	cursor: pointer;
+.start500{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+.comecou500{
+	height: 100%;
+	width: 100%;
+	display: none;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	justify-items:center;
+	align-items: center;
+	overflow: hidden;
+}
+.start1000{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+.comecou1000{
+	height: 100%;
+	width: 100%;
+	display: none;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	justify-items:center;
+	align-items: center;
+	overflow: hidden;
+}
+.start2000{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+.comecou2000{
+	height: 100%;
+	width: 100%;
+	display: none;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	justify-items:center;
+	align-items: center;
+	overflow: hidden;
+}
+.start4000{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+.comecou4000{
+	height: 100%;
+	width: 100%;
+	display: none;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	justify-items:center;
+	align-items: center;
+	overflow: hidden;
 }
 /*check*/
 #next:checked ~ .teste1{
@@ -251,6 +349,49 @@ img{
 	visibility: hidden;
 	position: absolute;
 }
+/*por hz*/
+#f125:checked ~ .start125{
+display: none;
+}
+#f125:checked ~ .comecou125{
+ display: grid;
+}
+
+#f250:checked ~ .start250{
+ display: none;
+}
+#f250:checked ~ .comecou250{
+ display: grid;
+}
+
+#f500:checked ~ .start500{
+ display: none;
+}
+#f500:checked ~ .comecou500{
+  display: grid;
+}
+
+#f1000:checked ~ .start1000{
+display: none;
+}
+#f1000:checked ~ .comecou1000{
+  display: grid;
+}
+
+#f2000:checked ~ .start2000{
+display: none;
+}
+#f2000:checked ~ .comecou2000{
+  display: grid;
+}
+
+#f4000:checked ~ .start4000{
+	display: none;
+}
+#f4000:checked ~ .comecou4000{
+  	display: grid;
+}
+/*checkboxes*/
 #next{
 	position: absolute;
 	visibility: hidden;
@@ -258,6 +399,92 @@ img{
 #close{
 	visibility: hidden;
 	position: absolute;
+}
+/*por hz*/
+#f125{
+	visibility: hidden;
+	position: absolute;
+}
+#f250{
+	visibility: hidden;
+	position: absolute;
+}
+#f500{
+	visibility: hidden;
+	position: absolute;
+}
+#f1000{
+	visibility: hidden;
+	position: absolute;
+}
+#f2000{
+	visibility: hidden;
+	position: absolute;
+}
+#f4000{
+	visibility: hidden;
+	position: absolute;
+}
+/*decibeis*/
+.db{
+	visibility: hidden;
+	position: absolute;
+}
+/*buttons pause , + and -*/
+.buttonMais{
+	background-color: var(--azuladao);
+	color:white;
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	width: var(--tamButton);
+}
+.buttonMais:hover{
+	box-shadow: 0px 0px 5px var(--backInput);
+}
+.buttonMenos{
+	background-color: var(--azuladao);
+	color:white;
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer; 
+}
+.buttonMenos:hover{
+	box-shadow: 0px 0px 5px var(--backInput);
+}
+.ouviu{
+	height: 150px;
+	width: 150px;
+}
+/*progress*/
+#caixaProgress{
+	z-index: 1;
+	height: 50px;
+	width: 100%;
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: auto auto auto auto auto auto;
+	column-gap: 10px;
+	align-items: center;
+	justify-content: center;
+}
+.select{
+	background-color: var(--azuladao);
+}
+
+/*add*/
+span{
+	background-color: var(--backInput);
+	height: 10px;
+	width: 10px;
+	border-radius: 100%;
+}
+img{
+	cursor: pointer;
 }
 
 /*responsvidade*/
