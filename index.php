@@ -4,6 +4,7 @@
 	<title>EAR HELP</title>
 </head>
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="icon" type="imagem/png" href="img/earhelp.png">
 <body>
 	<section class="firstView">
 	<div class="caixaLogin">

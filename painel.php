@@ -8,6 +8,7 @@ include("verificar_login.php");
 	<title>EAR HELP</title>
 </head>
 <link rel="stylesheet" type="text/css" href="css/style2.css">
+<link rel="icon" type="imagem/png" href="img/earhelp.png">
 <body>
 	<!-- navigation bar -->
 	<div class="nav">
