@@ -43,3 +43,21 @@
 	$(".buttonMais").height( $(".buttonMais").width());
 	$(".buttonMenos").width( $(".buttonMais").width());
 	$(".buttonMenos").height( $(".buttonMais").width());
+//pegar  o db
+var db = [];
+divs= $( ".db" ).get();
+function atualizaArray(){
+	for ( var i = 0; i < divs.length; i++ ) {
+	    db.push( divs[ i ].innerHTML );
+	}
+}
+//click mais
+$('.buttonMais').click(function(){
+    var pos= $('.buttonMais').index(this);
+    divs[pos].innerHTML=parseInt(divs[pos].innerHTML)+5;
+    db[pos]=divs[pos].innerHTML;
+    atualizaArray();
+    alert(db[pos]);
+});
+
+// divs[0].innerHTML=parseInt(divs[0].innerHTML)+5;
