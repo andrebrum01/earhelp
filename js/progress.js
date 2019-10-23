@@ -51,6 +51,7 @@ function atualizaArray(){
 	    db.push( divs[ i ].innerHTML );
 	}
 }
+atualizaArray();
 //click mais
 $('.buttonMais').click(function(){
     var pos= $(this).index(this);
