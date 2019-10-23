@@ -53,11 +53,22 @@ function atualizaArray(){
 }
 //click mais
 $('.buttonMais').click(function(){
-    var pos= $('.buttonMais').index(this);
-    divs[pos].innerHTML=parseInt(divs[pos].innerHTML)+5;
-    db[pos]=divs[pos].innerHTML;
-    atualizaArray();
+    var pos= $(this).index(this);
+    if(divs[pos].innerHTML<100){
+	    divs[pos].innerHTML=parseInt(divs[pos].innerHTML)+5;
+	    db[pos]=divs[pos].innerHTML;
+	    atualizaArray();
+	}
     alert(db[pos]);
 });
-
+// click menos
+$('.buttonMenos').click(function(){
+    var pos= $(this).index(this);
+    if(divs[pos].innerHTML>0){
+	    divs[pos].innerHTML=parseInt(divs[pos].innerHTML)-5;
+	    db[pos]=divs[pos].innerHTML;
+	    atualizaArray();
+	}
+    alert(db[pos]);
+});
 // divs[0].innerHTML=parseInt(divs[0].innerHTML)+5;
