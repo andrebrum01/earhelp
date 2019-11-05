@@ -11,9 +11,10 @@
 	$("#sons").css({
 		width:"calc(100%*"+progress+")"
 	});
-// on click no :)
+// on click no "ouviu"
 	$(".ouviu").click(function(){
 		$("#caixaProgress").children().eq(index).removeClass('select');
+		$(".teste1 input[type='checkbox']").eq(index).prop( "checked", false );
 		index++;
 		if(index==progress) index=0;
 
