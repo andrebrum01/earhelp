@@ -1,4 +1,7 @@
 // declarando variaveis
+	var audioContext = new (window.AudioContext || window.webkitAudioContext)();
+	var oscillator = audioContext.createOscillator();
+	var contextGain = audioContext.createGain();
 	var progress= $("#sons").children().length;
 	var index = $("#caixaProgress .select").index();
 // add as bolinhas
@@ -22,6 +25,7 @@
 			transform: "translateX(calc(calc(-100%/"+progress+")*"+index+"))"
 		});
 		$("#caixaProgress").children().eq(index).addClass('select');
+		stop();
 	});
 // -----------------------------------------------------------------------
 // declarando mais variaveis
@@ -60,8 +64,10 @@ $('.buttonMais').click(function(){
 	    divs[pos].innerHTML=parseInt(divs[pos].innerHTML)+5;
 	    db[pos]=divs[pos].innerHTML;
 	    atualizaArray();
+	    alert(db[pos].toString());
+	    stop();
+	    startBeep((pos+1)*225,db[pos].toString());
 	}
-    alert(db[pos]);
 });
 // click menos
 $('.buttonMenos').click(function(){
@@ -70,7 +76,38 @@ $('.buttonMenos').click(function(){
 	    divs[pos].innerHTML=parseInt(divs[pos].innerHTML)-5;
 	    db[pos]=divs[pos].innerHTML;
 	    atualizaArray();
+	   	alert(db[pos].toString());
+	   	stop();
+	    startBeep((pos+1)*225,db[pos].toString());
 	}
-    alert(db[pos]);
 });
-// divs[0].innerHTML=parseInt(divs[0].innerHTML)+5;
+// start sons
+function startBeep(freq,deb){
+  	oscillator = audioContext.createOscillator();
+	contextGain = audioContext.createGain();
+	oscillator.connect(contextGain);
+	contextGain.connect(audioContext.destination);
+	contextGain.gain.value=(deb/1000);
+	oscillator.type = 'sine';
+	oscillator.frequency.setValueAtTime(freq, audioContext.currentTime); // value in hertz
+	oscillator.start(audioContext.currentTime);
+}
+function stop(){
+	oscillator.stop(audioContext.currentTime);
+}
+function start(){
+	for(var i =0;i<$(".teste1 input[type='checkbox']").length;i++){
+		if($(".teste1 input[type='checkbox']").eq(i).prop("checked")){
+			startBeep((i+1)*225,db[i].toString())
+		}
+	}
+}
+// for(var i =0;i<$(".teste1 input[type='checkbox']").length;i++){
+// 	alert($(".teste1 input[type='checkbox']").eq(i).prop("checked"));
+	
+// }
+
+// 	if($(".teste1 input[type='checkbox']").prop( "checked").index()){
+
+// }
+stop();
