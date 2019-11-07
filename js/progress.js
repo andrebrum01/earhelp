@@ -48,6 +48,10 @@
 	$(".buttonMais").height( $(".buttonMais").width());
 	$(".buttonMenos").width( $(".buttonMais").width());
 	$(".buttonMenos").height( $(".buttonMais").width());
+//aaaaaaaaaaaaa 
+	$(".buttonMaisExemplo").height( $(".buttonMaisExemplo").width());
+	$(".buttonMenosExemplo").width( $(".buttonMaisExemplo").width());
+	$(".buttonMenosExemplo").height( $(".buttonMaisExemplo").width());
 //pegar  o db
 var db = [];
 divs= $( ".db" ).get();
@@ -58,8 +62,8 @@ function atualizaArray(){
 }
 atualizaArray();
 //click mais
-$('.buttonMais').click(function(){
-    var pos= $(this).index(this);
+$('div .buttonMais').click(function(){
+    var pos= $(this).index('.buttonMais');
     if(divs[pos].innerHTML<100){
 	    divs[pos].innerHTML=parseInt(divs[pos].innerHTML)+5;
 	    db[pos]=divs[pos].innerHTML;
@@ -71,7 +75,7 @@ $('.buttonMais').click(function(){
 });
 // click menos
 $('.buttonMenos').click(function(){
-    var pos= $(this).index(this);
+    var pos= $(this).index();
     if(divs[pos].innerHTML>0){
 	    divs[pos].innerHTML=parseInt(divs[pos].innerHTML)-5;
 	    db[pos]=divs[pos].innerHTML;

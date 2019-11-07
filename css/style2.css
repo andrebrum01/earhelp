@@ -179,7 +179,45 @@ div.btsair:hover  a.btsair{
 	border-radius: 20px;
 	cursor: pointer; 
 }
+.primeira .ouviuExemplo{
+	display: flex;
+	justify-self:center;
+	justify-content: center;
+	align-items: center;
+	height: 150px;
+	width: 150px;
+	background-color: var(--backblue);
+	color: white;
+	border-radius: 100%;
+	animation: pulse 2s ease infinite;
+}
+.primeira .caixaButton{
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.primeira .buttonMaisExemplo{
+	background-color: var(--azuladao);
+	color:white;
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: var(--tamButton);
+}
 
+.primeira .buttonMenosExemplo{
+	background-color: var(--azuladao);
+	color:white;
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer; 
+	margin-left: 50px;
+}
 /*area de teste*/
 .teste1{
 	height: 100%;

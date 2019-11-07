@@ -50,6 +50,19 @@ include("verificar_login.php");
 				<h1>Certifique-se de que esteja em um ambiente calmo</h1>
 				<div><img src="img/silent.png"></img>
 				</div>
+				<div class="seg">Seguinte ></div>
+			</div>
+			<div class="primeira">
+				<h1>Para regular o som utilize os botões</h1>
+				<div class="caixaButton">
+					<div class="buttonMaisExemplo">+</div>
+					<div class="buttonMenosExemplo">-</div>
+				</div>
+				<div class="seg">Seguinte ></div>
+			</div>
+			<div class="primeira">
+				<h1>Quando ouvir o som click no pause</h1>
+				<div class="ouviuExemplo">Pause</div>
 				<label for="close">
 					<div class="seg">Pronto</div>
 				</label>
