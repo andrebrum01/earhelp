@@ -35,7 +35,7 @@ include("verificar_login.php");
 		</label>
 		<div class="boxDica">
 			<div class="primeira eu">
-				<h1>Coloque seu fones de ouvidos</h1>
+				<h1>Coloque seus fones de ouvido</h1>
 				<div><img src="img/fone.png"></img>
 				</div>
 				<div class="seg">Seguinte ></div>
