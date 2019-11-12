@@ -67,7 +67,6 @@ $(".popUser").mouseleave(function () {
 		$(".popUser").hide();
 	},300);
 });
-//
 //aaaaaaaaaaaaa 	
 	$(".buttonMaisExemplo").height( $(".buttonMaisExemplo").width());	
 	$(".buttonMenosExemplo").width( $(".buttonMaisExemplo").width());		
@@ -94,8 +93,8 @@ $('div .buttonMais').click(function(){
 	}		
 });	
 // click menos	 
-$('.buttonMenos').click(function(){		
-    var pos= $(this).index();			
+$('div .buttonMenos').click(function(){		
+    var pos= $(this).index('.buttonMenos');			
     if(divs[pos].innerHTML>0){		
 	    divs[pos].innerHTML=parseInt(divs[pos].innerHTML)-5;	
 	    db[pos]=divs[pos].innerHTML;	
