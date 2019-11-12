@@ -35,34 +35,51 @@ body{
 	background-color: var(--backInput);
 	margin: 0px;
 	height: 80px;
-	display: flex;
-	flex-direction: row;
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr 1fr;
 	align-items: center;
 }
-div.btsair{
+/*  bt usuario */
+
+.caixaUser{
 	position: absolute;
 	right: 5px;
-	background-color: white;
 	padding: 5px;
-	border:green;
+	text-align: right;
+}
+.userzin{
+	text-align: right;
+}
+.popUser{
+	position: relative;
+	color: white;
+	background-color: var(--backInput);
+	display: none;
+	justify-content: center;
+	text-align: center;
+	flex-direction: column;
+	z-index: 5;
+	border-color: var(--backblue);
+	border-style: solid;
 	border-width: 2px;
 }
-a.btsair{
-	text-decoration: none;
-	color:var(--backInput);
-}
-div.btsair:hover{
-	background-color: var(--backInput);
-	border:white;
-}
-div.btsair:hover  a.btsair{
-	text-decoration: none;
-	color:white;
+.pop{
 	
+	box-shadow:inset 0px -2px var(--backblue);
+	padding-top: 2px;
+	cursor: pointer;
+	padding-left:5px;
+	padding-right:5px;
 }
-.nameUser{
-	color:white;
-	margin-left: 5px;
+.pop:hover{
+	background-color: var(--backblue);
+	box-shadow: -3px 0px var(--azuladao);
+}
+/* sair */
+.pop a{
+	text-decoration: none;
+	color: white;
 }
 /*firstView*/
 .firstView{
@@ -179,45 +196,7 @@ div.btsair:hover  a.btsair{
 	border-radius: 20px;
 	cursor: pointer; 
 }
-.primeira .ouviuExemplo{
-	display: flex;
-	justify-self:center;
-	justify-content: center;
-	align-items: center;
-	height: 150px;
-	width: 150px;
-	background-color: var(--backblue);
-	color: white;
-	border-radius: 100%;
-	animation: pulse 2s ease infinite;
-}
-.primeira .caixaButton{
-	display: flex;
-	width: 100%;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-}
-.primeira .buttonMaisExemplo{
-	background-color: var(--azuladao);
-	color:white;
-	border-radius: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: var(--tamButton);
-}
 
-.primeira .buttonMenosExemplo{
-	background-color: var(--azuladao);
-	color:white;
-	border-radius: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	cursor: pointer; 
-	margin-left: 50px;
-}
 /*area de teste*/
 .teste1{
 	height: 100%;
@@ -465,7 +444,8 @@ display: none;
 }
 /*decibeis*/
 .db{
-	display: none; 
+	visibility: hidden;
+	position: absolute;
 }
 /*buttons pause , + and -*/
 .buttonMais{
