@@ -559,7 +559,7 @@ section .caixaGrafico{
 	height: 100%;
 	width: 100%;
 	overflow:hidden;
-	background-color: lightgoldenrodyellow;
+	background-color: white;
 }
 .alerta{
 z-index: 5;

@@ -101,7 +101,6 @@ $('div .buttonMais').click(function(){
 	    divs[pos].innerHTML=parseInt(divs[pos].innerHTML)+5;	
 	    db[pos]=divs[pos].innerHTML;	
 	    atualizaArray();	
-	    alert(db[pos].toString());	
 	    stop();	
 	    startBeep((125*(2**pos)),db[pos].toString());	
 	}		
@@ -113,7 +112,6 @@ $('div .buttonMenos').click(function(){
 	    divs[pos].innerHTML=parseInt(divs[pos].innerHTML)-5;	
 	    db[pos]=divs[pos].innerHTML;	
 	    atualizaArray();	
-	   	alert(db[pos].toString());	
 	   	stop();	
 	    startBeep((125*(2**pos)),db[pos].toString());	
 	}	
@@ -141,7 +139,6 @@ function start(){
 }	
 //-----------------chart google------------------------
 google.charts.load('current', {'packages':['corechart']});
-google.charts.setOnLoadCallback(drawChart);
 function drawChart(){
 	var data = new google.visualization.DataTable();
 	data.addColumn('string', 'Frequência');
