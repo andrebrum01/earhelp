@@ -27,6 +27,19 @@
 		$("#caixaProgress").children().eq(index).addClass('select');
 		stop();
 	});
+// clicando nas bolinhas
+	$("#caixaProgress span").click(function(){
+		var selecionado = $("#caixaProgress").children().index(this);
+		$("#caixaProgress").children().eq(index).removeClass('select');
+		$(".teste1 input[type='checkbox']").eq(index).prop( "checked", false );
+		index=selecionado;
+		$("#sons").css({
+			transform: "translateX(calc(calc(-100%/"+progress+")*"+index+"))"
+		});
+		$("#caixaProgress").children().eq(index).addClass('select');
+		stop();
+		
+	});
 // -----------------------------------------------------------------------
 // declarando mais variaveis
 	var progress2= $(".boxDica").children().length;
@@ -72,9 +85,10 @@ $(".popUser").mouseleave(function () {
 	$(".buttonMenosExemplo").width( $(".buttonMaisExemplo").width());		
 	$(".buttonMenosExemplo").height( $(".buttonMaisExemplo").width());		
 //pegar  o db		
-var db = [];			
+var db;			
 divs= $( ".db" ).get();	
 function atualizaArray(){	
+	db = [];
 	for ( var i = 0; i < divs.length; i++ ) {	
 	    db.push( divs[ i ].innerHTML );	
 	}		
@@ -89,7 +103,7 @@ $('div .buttonMais').click(function(){
 	    atualizaArray();	
 	    alert(db[pos].toString());	
 	    stop();	
-	    startBeep((pos+1)*225,db[pos].toString());	
+	    startBeep((125*(2**pos)),db[pos].toString());	
 	}		
 });	
 // click menos	 
@@ -101,7 +115,7 @@ $('div .buttonMenos').click(function(){
 	    atualizaArray();	
 	   	alert(db[pos].toString());	
 	   	stop();	
-	    startBeep((pos+1)*225,db[pos].toString());	
+	    startBeep((125*(2**pos)),db[pos].toString());	
 	}	
 });	
 // start sons	
@@ -110,7 +124,7 @@ function startBeep(freq,deb){
 	contextGain = audioContext.createGain();	
 	oscillator.connect(contextGain);	
 	contextGain.connect(audioContext.destination);	
-	contextGain.gain.value=(deb/10000);	
+	contextGain.gain.value=(deb/1000);	
 	oscillator.type = 'sine';	
 	oscillator.frequency.setValueAtTime(freq, audioContext.currentTime); // value in hertz	
 	oscillator.start(audioContext.currentTime);	
@@ -121,8 +135,52 @@ function stop(){
 function start(){	
 	for(var i =0;i<$(".teste1 input[type='checkbox']").length;i++){	
 		if($(".teste1 input[type='checkbox']").eq(i).prop("checked")){	
-			startBeep((i+1)*225,db[i].toString())	
+			startBeep((125*(2**i)),db[i].toString())	
 		}	
 	}	
 }	
-stop();
+//-----------------chart google------------------------
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+function drawChart(){
+	var data = new google.visualization.DataTable();
+	data.addColumn('string', 'Frequência');
+	data.addColumn('number', 'Decibeis');
+	var graf= $(".grafico");
+	for(var i=0;i<db.length;i++){
+		data.addRow([(125*(2**i)).toString(),parseInt(db[i])]);
+	}
+	var options ={
+		'width':graf.width(),
+		'height':graf.height(),
+		legend: 'none',
+		backgroundColor:'transparent',
+		pointSize:4,
+	};
+	var chart = new google.visualization.LineChart(document.getElementById('graf'));
+	chart.draw(data,options);
+}
+$(window).resize(function(){
+	drawChart();
+});
+//-------------------caregar-o-baguio----------------------
+$('.carrega').click(function(){		
+	var palavras="Você não realizou o teste de frequência (s):<br>";
+	var count=0;
+	for(var i=0;i<db.length;i++){
+		if(db[i]==0){
+			palavras +=" "+(125*(2**i)).toString()+" "; 
+			count++;
+		}
+	}
+	if(count!=0) {
+		$(".alerta .conteudo").html(palavras.toString());
+		$(".alerta").show();
+		setTimeout(function(){
+			$(".alerta").hide();
+		},5000);
+	}
+	else
+		drawChart();
+});	
+$(".alerta").hide();

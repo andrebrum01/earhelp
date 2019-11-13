@@ -1,4 +1,4 @@
-body,html{
+html{
 	margin: 0px auto;
 	padding: 0px auto;
 	font-size: 2vw;
@@ -7,10 +7,16 @@ body,html{
     height:100%;
 	font-family: 'Indie Flower', cursive;
 	color: white;
+	overflow: hidden;
+	position: absolute;
 }
 body{
+	width: 100%;
+    height:100%;
+	margin: 0px auto;
+	padding: 0px auto;
 	overflow-x: hidden;
-	height: auto;
+	
 }
 @keyframes pulse{
 	0% {
@@ -32,6 +38,7 @@ body{
 }
 /*nav bar*/
 .nav{
+	position: relative;
 	background-color: var(--backInput);
 	margin: 0px;
 	height: 80px;
@@ -40,8 +47,8 @@ body{
 	grid-template-columns: 1fr 1fr;
 	align-items: center;
 }
-/*  bt usuario */
 
+/*  bt usuario */
 .caixaUser{
 	position: absolute;
 	right: 5px;
@@ -52,7 +59,7 @@ body{
 	text-align: right;
 }
 .popUser{
-	position: relative;
+	position: absolute;
 	color: white;
 	background-color: var(--backInput);
 	display: none;
@@ -63,6 +70,7 @@ body{
 	border-color: var(--backblue);
 	border-style: solid;
 	border-width: 2px;
+	right: 5px;
 }
 .pop{
 	
@@ -86,8 +94,8 @@ body{
 	height: 100%;
 	width: 100%;
 	background-color: var(--backblue);
+	position: relative;
 	display:flex;
-	position: absolute;
 }
 /*div caixa*/
 .caixa{
@@ -127,7 +135,6 @@ body{
 }
 /* caixa boas praticas*/
 .boas{
-	position: absolute;
 	z-index: 3;
 	height: 100%;
 	width: 100%;
@@ -135,9 +142,9 @@ body{
 	background-color: white;
 	color: var(--backInput);
 	text-align: center;
-	display: flex;
+	display: none;
 	flex-direction: row;
-	visibility: hidden;
+	position: absolute;
 }
 .fecha{
 	position: absolute;
@@ -148,6 +155,7 @@ body{
 /* caixao da dicas*/
 .boxDica{
 	position: absolute;
+	background-color: white;
 	height: 100%;
 	overflow: hidden;
 	display: flex;
@@ -234,24 +242,25 @@ body{
 	justify-content: center;	
 	align-items: center;	
 	cursor: pointer; 	
-	margin-left: 50px;	
+	margin-right: 50px;	
 }
 /*area de teste*/
 .teste1{
+	position: relative;
 	height: 100%;
 	width: 100%;
-	display: flex;
+	display: none;
 	flex-direction: column;
-	visibility: hidden;
 	background-color: white;
 	z-index: 1;
 	overflow: hidden;
 }
 .back{
+	z-index: 2;
 	position: absolute;
 	top:2%;
 	right: 2%;
-	z-index: 3;
+	
 }
 #sons{
 	z-index: 1;
@@ -389,21 +398,17 @@ body{
 	overflow: hidden;
 }
 /*check*/
-#next:checked ~ .teste1{
-	visibility: visible;
-	position: absolute;
-}
 #next:checked ~ .boas{
-	visibility: visible;
-	position: absolute;
-}
-#next:checked ~ .firstView{
-	visibility: hidden;
-	position: absolute;
+	display: flex;
 }
 #close:checked ~ .boas{
-	visibility: hidden;
-	position: absolute;
+	display: none;
+}
+#next:checked ~ .firstView{
+	display: none;
+}
+#next:checked ~ .teste1{
+	display: flex;
 }
 /*por hz*/
 #f125:checked ~ .start125{
@@ -449,41 +454,33 @@ display: none;
 }
 /*checkboxes*/
 #next{
-	position: absolute;
-	visibility: hidden;
+	display: none;
 }
 #close{
-	visibility: hidden;
-	position: absolute;
+	display: none;
 }
 /*por hz*/
 #f125{
-	visibility: hidden;
-	position: absolute;
+	display: none;
 }
 #f250{
-	visibility: hidden;
-	position: absolute;
+	display: none;
 }
 #f500{
-	visibility: hidden;
-	position: absolute;
+	display: none;
 }
 #f1000{
-	visibility: hidden;
-	position: absolute;
+	display: none;
 }
 #f2000{
-	visibility: hidden;
-	position: absolute;
+	display: none;
 }
 #f4000{
-	visibility: hidden;
-	position: absolute;
+	display: none;
 }
 /*decibeis*/
 .db{
-		display: none; 	
+	display: none; 	
 }
 /*buttons pause , + and -*/
 .buttonMais{
@@ -532,7 +529,7 @@ display: none;
 	width: 100%;
 	display: grid;
 	grid-template-rows: 1fr;
-	grid-template-columns: auto auto auto auto auto auto;
+	grid-template-columns: auto auto auto auto auto auto auto;
 	column-gap: 10px;
 	align-items: center;
 	justify-content: center;
@@ -551,12 +548,58 @@ span{
 img{
 	cursor: pointer;
 }
-
+/* grafico */
+/* section grafico */
+section .caixaGrafico{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	overflow:hidden;
+	background-color: lightgoldenrodyellow;
+}
+.alerta{
+z-index: 5;
+position: absolute;
+height: 100%;
+width: 100%;
+background-color: rgba(0,0,0,0.7);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.alerta .conteudo{
+	background-color: var(--backInput);
+	font-size: medium;
+	padding: 15px;
+	color:white;
+	text-transform: uppercase;
+	font-weight: bold;
+	border-radius: 15px;
+	max-width:70%;
+	box-shadow: 0px 0px 3px var(--borderInput);
+	text-align: center;
+}
+.carrega{
+	background: var(--azuladao);
+	border-radius: 50px;
+	margin-top: 5px;
+	padding: 5px;
+	cursor: pointer;
+}
+.grafico{
+	height: 95%;
+	width: 95%;
+}
 /*responsvidade*/
 @media only screen and (max-width: 800px){
 body,html{
 	font-family: arial;
 	font-size: 4vw;
+	
 }
 .titulo{
 	font-size: 4.5vw;

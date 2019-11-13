@@ -9,32 +9,12 @@ include("verificar_login.php");
 </head>
 <link rel="stylesheet" type="text/css" href="css/style2.css">
 <link rel="icon" type="imagem/png" href="img/earhelp.png">
+
 <body>
-	<!-- navigation bar -->
-	<div class="nav">
-		<div class="nameUser">Bem Vindo, <?php echo $_GET['user'];?></div>
-		<div class="caixaUser">
-			<img class="userzin" src="img/usuario.png"></img>
-			<div class="popUser">
-				<div class="pop">Resultados</div>
-				<div class="pop">Alterar Conta</div>
-				<div class="pop"><a class="sair" href="logout.php">SAIR</a></div>
-			</div>
-			<!-- <a class="btsair" href="logout.php">SAIR</a> -->
-		</div>
+	<div class="alerta">
+		<div class="conteudo"></div>
 	</div>
-	<!-- first view -->
 	<input type="checkbox" id="next">
-	<section class="firstView">
-		<div class="caixa">
-			<div class="titulo">Bem-vindo ao Ear Help</div>
-			<div class="conteudo">Faça o teste para verificar sua audição.</div>
-			<section id="btPlay" class="btPlay">
-			<label for="next">
-			<img src="img/play.png"></img>
-			</label>
-		</div>
-	</section>
 	<!-- boas praticas -->
 	<input type="checkbox" id="close">
 	<section class="boas">
@@ -63,8 +43,8 @@ include("verificar_login.php");
 			<div class="primeira">	
 				<h1>Para regular o som utilize os botões</h1>	
 				<div class="caixaButton">	
-					<div class="buttonMaisExemplo">+</div>	
 					<div class="buttonMenosExemplo">-</div>	
+					<div class="buttonMaisExemplo">+</div>	
 				</div>	
 				<div class="seg">Seguinte ></div>	
 			</div>	
@@ -75,6 +55,30 @@ include("verificar_login.php");
 					<div class="seg">Pronto</div>
 				</label>
 			</div>
+		</div>
+	</section>
+	<!-- navigation bar -->
+	<div class="nav">
+		<div class="nameUser">Bem Vindo, <?php echo $_GET['user'];?></div>
+		<div class="caixaUser">
+			<img class="userzin" src="img/usuario.png"></img>
+			<div class="popUser">
+				<div class="pop">Resultados</div>
+				<div class="pop">Conta</div>
+				<div class="pop"><a class="sair" href="logout.php">SAIR</a></div>
+			</div>
+			<!-- <a class="btsair" href="logout.php">SAIR</a> -->
+		</div>
+	</div>
+	<!-- first view -->
+	<section class="firstView">
+		<div class="caixa">
+			<div class="titulo">Bem-vindo ao Ear Help</div>
+			<div class="conteudo">Faça o teste para verificar sua audição.</div>
+			<section id="btPlay" class="btPlay">
+			<label for="next">
+			<img src="img/play.png"></img>
+			</label>
 		</div>
 	</section>
 
@@ -93,9 +97,9 @@ include("verificar_login.php");
 				</label>
 				<div class="comecou125">
 					<div class="db">0</div>
-					<div class="buttonMais">+</div>
-					<div class="ouviu">Pause</div>
 					<div class="buttonMenos">-</div>
+					<div class="ouviu">Pause</div>
+					<div class="buttonMais">+</div>
 				</div>
 			</div>
 			<!-- 250 -->
@@ -107,9 +111,9 @@ include("verificar_login.php");
 				</label>
 				<div class="comecou250">
 					<div class="db">0</div>
-					<div class="buttonMais">+</div>
-					<div class="ouviu">Pause</div>
 					<div class="buttonMenos">-</div>
+					<div class="ouviu">Pause</div>
+					<div class="buttonMais">+</div>
 				</div>
 			</div>
 			<!-- 500 -->
@@ -121,9 +125,9 @@ include("verificar_login.php");
 				</label>
 				<div class="comecou500">
 					<div class="db">0</div>
-					<div class="buttonMais">+</div>
-					<div class="ouviu">Pause</div>
 					<div class="buttonMenos">-</div>
+					<div class="ouviu">Pause</div>
+					<div class="buttonMais">+</div>
 				</div>
 			</div>
 			<!-- 1000 -->
@@ -135,9 +139,9 @@ include("verificar_login.php");
 				</label>
 				<div class="comecou1000">
 					<div class="db">0</div>
-					<div class="buttonMais">+</div>
-					<div class="ouviu">Pause</div>
 					<div class="buttonMenos">-</div>
+					<div class="ouviu">Pause</div>
+					<div class="buttonMais">+</div>
 				</div>
 			</div>
 			<!-- 2000 -->
@@ -149,9 +153,9 @@ include("verificar_login.php");
 				</label>
 				<div class="comecou2000">
 					<div class="db">0</div>
-					<div class="buttonMais">+</div>
-					<div class="ouviu">Pause</div>
 					<div class="buttonMenos">-</div>
+					<div class="ouviu">Pause</div>
+					<div class="buttonMais">+</div>
 				</div>
 			</div>
 			<!-- 4000 -->
@@ -163,16 +167,23 @@ include("verificar_login.php");
 				</label>
 				<div class="comecou4000">
 					<div class="db">0</div>
-					<div class="buttonMais">+</div>
-					<div class="ouviu">Pause</div>
 					<div class="buttonMenos">-</div>
+					<div class="ouviu">Pause</div>
+					<div class="buttonMais">+</div>
 				</div>
 			</div>
+			<section class="caixaGrafico">
+				<div class="carrega">Carregar resultado</div>
+				<div class="grafico" id="graf">
+				</div>
+			</section>
 		</div>
 		<div id="caixaProgress"/>
 	</section>
+	
 	<!-- jquery and Js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript" src="js/progress.js"></script>
 </body>
 </html>
