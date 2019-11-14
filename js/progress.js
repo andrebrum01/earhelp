@@ -154,9 +154,20 @@ function drawChart(){
 		backgroundColor:'transparent',
 		pointSize:4,
 		colors: ['#3de6af'],
-		vAxis:{ maxValue: 100,minValue:0}
+		vAxis:{ 
+			maxValue:100,
+			minValue:0,
+			direction:-1,
+			gridlines:{
+				color:'#082336'
+			},
+			color:'#082336'
+		},
+		hAxis:{
+			color:'#082336'
+		}
 	};
-	var chart = new google.visualization.LineChart(document.getElementById('graf'));
+	var chart = new google.visualization.AreaChart(document.getElementById('graf'));
 	chart.draw(data,options);
 }
 $(window).resize(function(){
