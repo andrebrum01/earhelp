@@ -153,6 +153,8 @@ function drawChart(){
 		legend: 'none',
 		backgroundColor:'transparent',
 		pointSize:4,
+		colors: ['#3de6af'],
+		vAxis:{ maxValue: 100,minValue:0}
 	};
 	var chart = new google.visualization.LineChart(document.getElementById('graf'));
 	chart.draw(data,options);
