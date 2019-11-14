@@ -1,1 +1,1 @@
-# https://earhelp.cleverapps.io/index.php
+# https://earhelp.000webhostapp.com/
