@@ -15,7 +15,6 @@ $email;
 if(mysqli_num_rows($result) != 0){
     $email = mysqli_fetch_row($result);
     $email = $email[0];
-}
 
 $query = "select DISTINCT grupo from grafico where email= '$email'";
 $result = mysqli_query($conexao, $query);
@@ -48,40 +47,25 @@ else{
 	error_reporting(0);
     
 }
+}
 ?>
 <body>
 	<section class="caixa">
-		
-	</section>
-</body>
-<!-- js -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript" src="charts.js"></script>
-<script type="text/javascript">
-	var freq ;
-	var db;
-	<?php 
-		for($i=0;$i<count($freq);$i++){
+		<?php 
+		for($i=count($freq)-1;$i>=0;$i--){
 	?>
-		var freq="<?php echo implode("/", $freq[$i]); ?>";
-		var db="<?php echo implode("/", $dec[$i]); ?>";
-		var boxinha = $(".caixa").append("<div class='box'></div>");
-		
-		drawChart(boxinha);
+		<div class='box'>
+			<?php echo implode("/", $freq[$i]); ?><br>
+			<?php echo implode("/", $dec[$i]); ?>
+		</div>
 	<?php
 		}//<-------i
 	?>
-	 // $(window).resize(function(){
-		// var count=0;
-		// for(var i=0;i<db.length;i++){
-		// 	if(db[i]==0){ 
-		// 		count++;
-		// 	}
-		// }
-		// if(count==0)
-	 // 		drawChart();
-	 // });
-</script>
-<script type="text/javascript" src="js/charts.js">
-</script>
+	</section>
+
+<!-- js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="js/charts.js"></script>
+</body>
+</html>

@@ -18,11 +18,11 @@ if(mysqli_num_rows($result) != 0){
         $result = mysqli_query($conexao, $query);
     }
         if($result){
-            header('Location: resultados.php?user=$user');
+            header('Location: resultados.php?user='.$user);
             echo "Salvo com Sucesso";
         }
         else{
-            header('Location: painel.php?$user');
+            header('Location: painel.php?user='.$user);
             exit();
         }
 }

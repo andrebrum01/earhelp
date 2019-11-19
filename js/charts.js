@@ -1,4 +1,16 @@
 // desenhar o grafico
+	alert("oi");
+	var db;
+	var divs= $( ".box" ).get();	
+	function atualizaArray(){	
+	db = [];
+		for ( var i = 0; i < divs.length; i++ ) {	
+		    db.push( divs[ i ].innerHTML );	
+		}
+	}
+	atualizaArray();
+
+
 	google.charts.load('current', {'packages':['corechart']});
 	window.drawChart function(box){
 		var data = new google.visualization.DataTable();
@@ -31,3 +43,13 @@
 		var chart = new google.visualization.AreaChart(graf);
 		chart.draw(data,options);
 	}
+// $(window).resize(function(){
+		// var count=0;
+		// for(var i=0;i<db.length;i++){
+		// 	if(db[i]==0){ 
+		// 		count++;
+		// 	}
+		// }
+		// if(count==0)
+	 // 		drawChart();
+	 // });
