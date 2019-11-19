@@ -16,11 +16,10 @@ if(mysqli_num_rows($result) != 0){
         $db = $vetor[$i];
         $query = "insert into grafico (frequencia,decibeis,grupo,email) values ('$freq','$db','$grupo','$email')";
         $result = mysqli_query($conexao, $query);
-        echo $query."<br>";
     }
         if($result){
+            header('Location: resultados.php?user=$user');
             echo "Salvo com Sucesso";
-            header("Location: resultados.php?user=$user");
         }
         else{
             header('Location: painel.php?$user');
