@@ -43,7 +43,10 @@ if(mysqli_num_rows($result)!=0){
     
 }
 else{
-    echo "<div>Sem Resultados</div>";
+	echo "<div>Sem Resultados</div>";
+	ini_set('display_errors', 0 );
+	error_reporting(0);
+    
 }
 ?>
 <body>

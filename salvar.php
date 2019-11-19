@@ -14,8 +14,9 @@ if(mysqli_num_rows($result) != 0){
     for($i=0;$i<count($vetor);$i++){
         $freq= 125*(2**$i);
         $db = $vetor[$i];
-        $query = "insert into grafico(frequencia,decibeis,grupo,email) values ('$freq','$db','$grupo','$email')";
+        $query = "insert into grafico (frequencia,decibeis,grupo,email) values ('$freq','$db','$grupo','$email')";
         $result = mysqli_query($conexao, $query);
+        echo $query."<br>";
     }
         if($result){
             echo "Salvo com Sucesso";

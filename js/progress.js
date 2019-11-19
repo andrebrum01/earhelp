@@ -206,7 +206,6 @@ $(".alerta").hide();
 // onclick no salvar mn
 $(".salvar").click(function(){
 	var user = $(".user").text();
-	alert(user);
 	var vetor = "";
 	for(var i=0;i<db.length;i++){
 		if(i<db.length-1)vetor+="vetor[]="+db[i]+"&";
