@@ -568,6 +568,7 @@ height: 100%;
 width: 100%;
 background-color: rgba(0,0,0,0.7);
 display: flex;
+flex-direction: row;
 justify-content: center;
 align-items: center;
 }
@@ -593,6 +594,31 @@ align-items: center;
 .grafico{
 	height: 95%;
 	width: 95%;
+}
+/* salvar button */
+.salvar{
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	height: 50px;
+	width: 50px;
+	background-color: var(--azuladao);
+	border-radius: 100%;
+	background-image: url(../img/salvar.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background: cover;
+	border-color: var(--backInput);
+	border-style: solid;
+	padding: 2px;
+	border-width: 2px;
+	display: none;
+	cursor: pointer;
+}
+/* oculto */
+.user{
+	position: absolute;
+	display: none;
 }
 /*responsvidade*/
 @media only screen and (max-width: 800px){

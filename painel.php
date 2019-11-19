@@ -63,11 +63,11 @@ include("verificar_login.php");
 		<div class="caixaUser">
 			<img class="userzin" src="img/usuario.png"></img>
 			<div class="popUser">
-				<div class="pop">Resultados</div>
+				<div class="pop resultados">Resultados</div>
 				<div class="pop">Conta</div>
 				<div class="pop"><a class="sair" href="logout.php">SAIR</a></div>
 			</div>
-			<!-- <a class="btsair" href="logout.php">SAIR</a> -->
+			
 		</div>
 	</div>
 	<!-- first view -->
@@ -174,13 +174,13 @@ include("verificar_login.php");
 			</div>
 			<section class="caixaGrafico">
 				<div class="carrega">Carregar resultado</div>
-				<div class="grafico" id="graf">
-				</div>
+				<div class="grafico" id="graf"></div>
+				<div class="salvar"></div>
 			</section>
 		</div>
 		<div id="caixaProgress"/>
 	</section>
-	
+	<div class="user"><?php echo $_GET['user'];?></div>
 	<!-- jquery and Js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>

@@ -1,3 +1,4 @@
+
 // declarando variaveis
 	var audioContext = new (window.AudioContext || window.webkitAudioContext)();	
 	var oscillator = audioContext.createOscillator();	
@@ -140,6 +141,7 @@ function start(){
 //-----------------chart google------------------------
 google.charts.load('current', {'packages':['corechart']});
 function drawChart(){
+	$(".salvar").show();
 	var data = new google.visualization.DataTable();
 	data.addColumn('string', 'Frequência');
 	data.addColumn('number', 'Decibeis');
@@ -171,7 +173,14 @@ function drawChart(){
 	chart.draw(data,options);
 }
 $(window).resize(function(){
-	drawChart();
+	var count=0;
+	for(var i=0;i<db.length;i++){
+		if(db[i]==0){ 
+			count++;
+		}
+	}
+	if(count==0)
+		drawChart();
 });
 //-------------------caregar-o-baguio----------------------
 $('.carrega').click(function(){		
@@ -194,3 +203,20 @@ $('.carrega').click(function(){
 		drawChart();
 });	
 $(".alerta").hide();
+// onclick no salvar mn
+$(".salvar").click(function(){
+	var user = $(".user").text();
+	alert(user);
+	var vetor = "";
+	for(var i=0;i<db.length;i++){
+		if(i<db.length-1)vetor+="vetor[]="+db[i]+"&";
+		else vetor+="vetor[]="+db[i];
+	}
+	vetor+="&user="+user;
+	window.location = "salvar.php?"+vetor;
+});
+// onclick no resultado
+$(".resultados").click(function(){
+	var user = $(".user").text();
+	window.location = "resultados.php?user="+user;
+});
