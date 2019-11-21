@@ -561,6 +561,13 @@ section .caixaGrafico{
 	overflow:hidden;
 	background-color: white;
 }
+.gravidade{
+	color: var(--backblue);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
 .alerta{
 z-index: 5;
 position: absolute;

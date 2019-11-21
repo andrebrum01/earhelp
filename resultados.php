@@ -49,14 +49,24 @@ else{
 }
 }
 ?>
+
 <body>
+	
 	<section class="caixa">
+		<a class="back" href="painel.php?user=<?php echo $user?>"></a>
 		<?php 
-		for($i=count($freq)-1;$i>=0;$i--){
-	?>
+			for($i=count($freq)-1;$i>=0;$i--){
+		?>
 		<div class='box'>
-			<?php echo implode("/", $freq[$i]); ?><br>
-			<?php echo implode("/", $dec[$i]); ?>
+			<div class="number"><?php echo $i+1 ?>°</div>
+			<div class="freq"><?php echo implode("/", $freq[$i]); ?></div>
+			<div class="db"><?php echo implode("/", $dec[$i]); ?></div>
+			<div class="gravidade">
+				
+			</div>
+			<div id="<?php echo $i ?>" class="grafico">
+
+			</div>
 		</div>
 	<?php
 		}//<-------i

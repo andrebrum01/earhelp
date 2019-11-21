@@ -145,10 +145,12 @@ function drawChart(){
 	var data = new google.visualization.DataTable();
 	data.addColumn('string', 'Frequência');
 	data.addColumn('number', 'Decibeis');
-	var graf= $(".grafico");
 	for(var i=0;i<db.length;i++){
 		data.addRow([(125*(2**i)).toString(),parseInt(db[i])]);
 	}
+	$(".gravidade").text(gravidade(parseInt(db[2]),parseInt(db[3]),parseInt(db[4])));
+	alert($(".gravidade").text());
+	var graf= $(".grafico");
 	var options ={
 		'width':graf.width(),
 		'height':graf.height(),
@@ -219,3 +221,22 @@ $(".resultados").click(function(){
 	var user = $(".user").text();
 	window.location = "resultados.php?user="+user;
 });
+// saber a gravidade
+function gravidade(val1,val2,val3){
+ 	var text;
+ 	var media=(val1+val2+val3)/3;
+ 	if(media <= 25)
+ 		text = "Audição Normal";
+ 	else if(media <=40)
+ 		text= "Perda Leve"
+ 	else if(media <=60)
+ 		text = "Perda Moderada"
+ 	else if(media <=80)
+ 		text = "Perda Severa"
+ 	else if(media > 80)
+ 		text = "Perda Profunda"
+ 	else
+ 		text = "Erro no Resultado"
+
+ 	return text;
+ }

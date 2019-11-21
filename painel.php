@@ -172,8 +172,10 @@ include("verificar_login.php");
 					<div class="buttonMais">+</div>
 				</div>
 			</div>
+			<!-- grafico -->
 			<section class="caixaGrafico">
 				<div class="carrega">Carregar resultado</div>
+				<div class="gravidade"></div>
 				<div class="grafico" id="graf"></div>
 				<div class="salvar"></div>
 			</section>
