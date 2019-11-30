@@ -64,7 +64,7 @@ include("verificar_login.php");
 			<img class="userzin" src="img/usuario.png"></img>
 			<div class="popUser">
 				<div class="pop resultados">Resultados</div>
-				<div class="pop">Conta</div>
+				<div class="pop alterar">Conta</div>
 				<div class="pop"><a class="sair" href="logout.php">SAIR</a></div>
 			</div>
 			

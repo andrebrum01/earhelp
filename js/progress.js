@@ -221,6 +221,12 @@ $(".resultados").click(function(){
 	var user = $(".user").text();
 	window.location = "resultados.php?user="+user;
 });
+// onclick no conta
+$(".alterar").click(function(){
+	var user = $(".user").text();
+	window.location = "editarUsuario.php?user="+user;
+});
+
 // saber a gravidade
 function gravidade(val1,val2,val3){
  	var text;

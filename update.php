@@ -1,19 +1,40 @@
 <?php
 include("conexao.php");
+$trueUser =mysqli_real_escape_string($conexao,$_GET['trueUser']);
+$user = mysqli_real_escape_string($conexao,$_POST['user']);
+$email = mysqli_real_escape_string($conexao,$_POST['email']);
+$lastpassword = mysqli_real_escape_string($conexao,$_POST['senha']);
+$newpassword = mysqli_real_escape_string($conexao,$_POST['denovo']);
+$confnewpassword = mysqli_real_escape_string($conexao,$_POST['confdenovo']);
 
-$user = mysqli_real_escape_string($conexao,$_GET['user']);
-
-
-
-$query = "update usuario set email = '' where email='{$usuario}'";
+$query = "select senha,email from usuario where user='{$trueUser}'";
 $result = mysqli_query($conexao, $query);
-
-if(mysqli_num_rows($result) == 1){
-	$user=mysqli_fetch_row($result);
+$array=mysqli_fetch_row($result);
+echo $array[0];
+if($array[0]==md5($lastpassword)){
+	// usuario
+if($user){
+$query = "update usuario set user = '{$user}' where user='{$trueUser}' ";
+$trueUser =$user;
+$result = mysqli_query($conexao, $query);
+}
+// email
+if($email){
+$query = "update usuario set email = '{$email}' where user='{$trueUser}' ";
+$result = mysqli_query($conexao, $query);
+$query = "update grafico set email = '{$email}' where email='{$array[1]}' ";
+$result = mysqli_query($conexao, $query);
+}
+// new password
+if($newpassword && $newpassword==$confnewpassword){
+$query = "update usuario set senha = md5('{$newpassword}') where user='{$trueUser}' ";
+$result = mysqli_query($conexao, $query);
 }
 
-if($user[0]!=null){
-    header("location: painel.php?user=$user[0]");
+header("location: editarUsuario.php?user=$trueUser&senha=true");
 }
-
+// se a senha não condiz
+else{
+	//header("location: editarUsuario.php?user=$trueUser&senha=false");
+}
 ?>
