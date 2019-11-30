@@ -10,7 +10,6 @@ $confnewpassword = mysqli_real_escape_string($conexao,$_POST['confdenovo']);
 $query = "select senha,email from usuario where user='{$trueUser}'";
 $result = mysqli_query($conexao, $query);
 $array=mysqli_fetch_row($result);
-echo $array[0];
 if($array[0]==md5($lastpassword)){
 	// usuario
 if($user){
@@ -35,6 +34,6 @@ header("location: editarUsuario.php?user=$trueUser&senha=true");
 }
 // se a senha não condiz
 else{
-	//header("location: editarUsuario.php?user=$trueUser&senha=false");
+	header("location: editarUsuario.php?user=$trueUser&senha=false");
 }
 ?>
