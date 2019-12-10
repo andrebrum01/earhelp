@@ -5,6 +5,10 @@
 	var contextGain = audioContext.createGain();
 	var progress= $("#sons").children().length;
 	var index = $("#caixaProgress .select").index();
+	var tam=($(window).height()/3)*0.8;
+	$(".ouviuExemplo").width(tam);
+	$(".ouviuExemplo").height(tam);
+
 // add as bolinhas
 	for(var i=0;i<progress;i++){
 	$("#caixaProgress").append("<span></span>");
@@ -175,6 +179,8 @@ function drawChart(){
 	chart.draw(data,options);
 }
 $(window).resize(function(){
+	$(".ouviuExemplo").width(tam);
+	$(".ouviuExemplo").height(tam);
 	var count=0;
 	for(var i=0;i<db.length;i++){
 		if(db[i]==0){ 
@@ -246,3 +252,5 @@ function gravidade(val1,val2,val3){
 
  	return text;
  }
+ // add variavel
+

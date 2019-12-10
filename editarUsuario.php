@@ -9,6 +9,8 @@ $autenticado= $_GET['senha'];
 <html>
 <head>
 	<title>EAR HELP</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf8">
 </head>
 <link rel="icon" type="imagem/png" href="img/earhelp.png">
 <link rel="stylesheet" type="text/css" href="css/style4.css">

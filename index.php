@@ -3,7 +3,7 @@
 <head>
 	<title>EAR HELP</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<meta charset="utf8">
 </head>
 <link rel="stylesheet" type="text/css" href="css/style6.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">

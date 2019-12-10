@@ -6,6 +6,8 @@ include("verificar_login.php");
 <html>
 <head>
 	<title>EAR HELP</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf8">
 </head>
 <link rel="stylesheet" type="text/css" href="css/style2.css">
 <link rel="icon" type="imagem/png" href="img/earhelp.png">
@@ -24,19 +26,19 @@ include("verificar_login.php");
 		<div class="boxDica">
 			<div class="primeira eu">
 				<h1>Coloque seu fones de ouvidos</h1>
-				<div><img src="img/fone.png"></img>
+				<div class="imgExemplo"><img src="img/fone.png"></img>
 				</div>
 				<div class="seg">Seguinte ></div>
 			</div>
 			<div class="primeira">
 				<h1>Configure o volume do seu dispositivo para 100%</h1>
-				<div><img src="img/som.png"></img>
+				<div class="imgExemplo"><img src="img/som.png"></img>
 				</div>
 				<div class="seg">Seguinte ></div>
 			</div>
 			<div class="primeira">
 				<h1>Certifique-se de que esteja em um ambiente calmo</h1>
-				<div><img src="img/silent.png"></img>
+				<div class="imgExemplo"><img src="img/silent.png"></img>
 				</div>
 				<div class="seg">Seguinte ></div>	
 			</div>	
@@ -52,7 +54,7 @@ include("verificar_login.php");
 				<h1>Quando ouvir o som click no pause</h1>	
 				<div class="ouviuExemplo">Pause</div>
 				<label for="close">
-					<div class="seg">Pronto</div>
+					<div class="lab">Pronto</div>
 				</label>
 			</div>
 		</div>
@@ -93,7 +95,7 @@ include("verificar_login.php");
 				<input type="checkbox" id="f125" onclick="start()">
 				<h1>Frequência de 125</h1>
 				<label class="start125" for="f125">
-						<div><img src="img/play.png"></img></div>
+						<img  class="imgPlay"src="img/play.png"></img>
 				</label>
 				<div class="comecou125">
 					<div class="db">0</div>
@@ -107,7 +109,7 @@ include("verificar_login.php");
 				<input type="checkbox" id="f250" onclick="start()">
 				<h1>Frequência de 250</h1>
 				<label class="start250" for="f250">
-						<div><img src="img/play.png"></img></div>
+						<img  class="imgPlay"src="img/play.png"></img>
 				</label>
 				<div class="comecou250">
 					<div class="db">0</div>
@@ -121,7 +123,7 @@ include("verificar_login.php");
 				<input type="checkbox" id="f500" onclick="start()">
 				<h1>Frequência de 500</h1>
 				<label class="start500" for="f500">
-						<div><img src="img/play.png"></img></div>
+						<img  class="imgPlay"src="img/play.png"></img>
 				</label>
 				<div class="comecou500">
 					<div class="db">0</div>
@@ -135,7 +137,7 @@ include("verificar_login.php");
 				<input type="checkbox" id="f1000" onclick="start()">
 				<h1>Frequência de 1000</h1>
 				<label class="start1000" for="f1000">
-						<div><img src="img/play.png"></img></div>
+						<img  class="imgPlay"src="img/play.png"></img>
 				</label>
 				<div class="comecou1000">
 					<div class="db">0</div>
@@ -149,7 +151,7 @@ include("verificar_login.php");
 				<input type="checkbox" id="f2000" onclick="start()">
 				<h1>Frequência de 2000</h1>
 				<label class="start2000" for="f2000">
-						<div><img src="img/play.png"></img></div>
+						<img  class="imgPlay"src="img/play.png"></img>
 				</label>
 				<div class="comecou2000">
 					<div class="db">0</div>
@@ -163,7 +165,7 @@ include("verificar_login.php");
 				<input type="checkbox" id="f4000" onclick="start()">
 				<h1>Frequência de 4000</h1>
 				<label class="start4000" for="f4000">
-						<div><img src="img/play.png"></img></div>
+						<img  class="imgPlay"src="img/play.png"></img>
 				</label>
 				<div class="comecou4000">
 					<div class="db">0</div>

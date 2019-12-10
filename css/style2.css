@@ -1,7 +1,7 @@
 html{
 	margin: 0px auto;
 	padding: 0px auto;
-	font-size: 3vh;
+	font-size: 4.5vh;
 	width: 100%;
     height:100%;
 	font-family: "Source Sans Pro", Arial, sans-serif;
@@ -40,13 +40,15 @@ body{
 	position: relative;
 	background-color: var(--backInput);
 	margin: 0px;
-	height: 80px;
+	height: 15%;
 	display: grid;
 	grid-template-rows: 1fr;
 	grid-template-columns: 1fr 1fr;
 	align-items: center;
 }
-
+.nameUser{
+	font-size: 4.5vh;
+}
 /*  bt usuario */
 .caixaUser{
 	position: absolute;
@@ -72,7 +74,7 @@ body{
 	right: 5px;
 }
 .pop{
-	
+	font-size: 5vh;
 	box-shadow:inset 0px -2px var(--backblue);
 	padding-top: 2px;
 	cursor: pointer;
@@ -105,7 +107,7 @@ body{
 	grid-template-rows: auto auto 1fr;
 }
 .titulo{
-	font-size: 3vw;
+	font-size: 4vw;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -132,6 +134,9 @@ body{
 	justify-content: center;
 	align-items: center;
 }
+.imgPlay{
+	height: 25%;
+}
 /* caixa boas praticas*/
 .boas{
 	z-index: 3;
@@ -150,6 +155,11 @@ body{
 	right: 2%;
 	top: 2%;
 	z-index: 4;
+	width: 5%;
+}
+.fecha img{
+	width: 100%;
+	height: 100%;
 }
 /* caixao da dicas*/
 .boxDica{
@@ -174,42 +184,51 @@ body{
 	width: 90%;
 	justify-self:center;
 }
+.primeira .imgExemplo{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.primeira div img{
+	height: 60%;
+}
 .seg{
 	display: flex;
 	justify-self:center;
 	justify-content: center;
 	align-items: center;
 	background-color: var(--azuladao);
-	width: 30%;
-	height: 30%;
-	font-size: 32px;
+	min-width: 30%;
+	max-width: 90%;
+	min-height: 30%;
 	border-radius: 20px;
 	cursor: pointer; 
+	font-weight: bold;
 }
 .primeira label{
-	justify-self:center;
-	width: 30%;
-	height: 30%;
-}
-.primeira label .seg{
 	display: flex;
 	justify-self:center;
 	justify-content: center;
 	align-items: center;
+	justify-self:center;
 	background-color: var(--azuladao);
-	width: 100%;
-	height: 100%;
-	font-size: 32px;
 	border-radius: 20px;
+	min-width: 30%;
+	max-width: 90%;
+	min-height: 30%;
 	cursor: pointer; 
+	font-weight: bold;
 }
+
 .primeira .ouviuExemplo{	
 	display: flex;	
 	justify-self:center;	
 	justify-content: center;	
 	align-items: center;	
-	height: 150px;	
-	width: 150px;	
+	height: 90%;
 	background-color: var(--backblue);	
 	color: white;	
 	border-radius: 100%;	
@@ -259,7 +278,10 @@ body{
 	position: absolute;
 	top:2%;
 	right: 2%;
-	
+	width: 5%;
+}
+.back img{
+	width: 100%;
 }
 #sons{
 	z-index: 1;
@@ -580,7 +602,7 @@ align-items: center;
 }
 .alerta .conteudo{
 	background-color: var(--backInput);
-	font-size: medium;
+	font-size: 4vh;
 	padding: 15px;
 	color:white;
 	text-transform: uppercase;
@@ -628,12 +650,18 @@ align-items: center;
 }
 /*responsvidade*/
 @media only screen and (max-width: 800px){
-body,html{
-	font-family: arial;
-	font-size: 4vw;
-	
-}
-.titulo{
-	font-size: 4.5vw;
-}
+	body,html{
+		font-family: arial;
+		font-size: 4vw;
+		
+	}
+	.titulo{
+		font-size: 4.5vw;
+	}
+	.fecha{
+		width: 8%;
+	}
+	.back{
+		width: 8%;
+	}
 } 

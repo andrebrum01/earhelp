@@ -19,7 +19,5 @@ echo mysqli_error($conexao);
 if(mysqli_error($conexao)){
 header("location: editarUsuario.php?user=".$user);
 }
-else{
 header("location: index.php");
-}
 ?>
