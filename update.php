@@ -1,4 +1,6 @@
 <?php
+ini_set('display_errors', 0 );
+error_reporting(0);
 include("conexao.php");
 $trueUser =mysqli_real_escape_string($conexao,$_GET['trueUser']);
 $user = mysqli_real_escape_string($conexao,$_POST['user']);

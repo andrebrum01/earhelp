@@ -9,6 +9,7 @@ html,body{
 	color: white;
 	position: absolute;
 	background-color: var(--backInput);
+	user-select: none;
 }
 :root{
 	--backblue:#00121e;
@@ -97,9 +98,8 @@ input:-webkit-autofill {
 	background-image: url(../img/usuario.png);
 	background-repeat: no-repeat;
 	background: cover;
-	background-position: top;
-	width: 15%;
-	height: 50px;
+	background-position: center;
+	width: 10%;
 }
 /*butão*/
 .btlogin{
@@ -130,7 +130,59 @@ input:-webkit-autofill {
 	color:white;
 	padding: 5px;
 }
+/*excluir conta*/
+.excluir{
+	position: absolute;
+	background-color: crimson;
+	border-radius: 100%;
+	width: 5%;
+	right: 1%;
+	bottom: 1%;
+	cursor: pointer;
+	background-size: 70%;
+	background-position: center;
+	background-image: url(../img/excluir.png);
+	background-repeat: no-repeat;
 
+}
+/*alerta*/
+.boxAlerta{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 100;
+}
+.alerta{
+	background-color: white;
+	padding: 15px;
+	border-radius: 15px 15px 0 0;
+	color: var(--backblue);
+
+}
+.escolha{
+	display: flex;
+}
+.yes{
+	background-color: #38f252;
+	text-align: center;
+	width: 100%;
+	border-radius: 0 0 15px 0;
+	padding: 5px;
+	cursor: pointer;
+}
+.no{
+	text-align: center;
+	width: 100%;
+	background-color: crimson;
+	border-radius: 0 0 0 15px;
+	padding: 5px;
+	cursor: pointer;
+}
 @media only screen and (max-width: 800px){
 body,html{
 	font-family: arial;
@@ -139,5 +191,8 @@ body,html{
 }
 .updateLogin{
 	width: 70%;
+}
+.excluir{
+	width: 8%;
 }
 } 

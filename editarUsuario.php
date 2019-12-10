@@ -13,6 +13,15 @@ $autenticado= $_GET['senha'];
 <link rel="icon" type="imagem/png" href="img/earhelp.png">
 <link rel="stylesheet" type="text/css" href="css/style4.css">
 <body>
+	<div class="boxAlerta">
+		<div class="caixao">
+			<div class="alerta">DESEJA EXCLUIR A SUA CONTA ?</div>
+			<div class="escolha">
+				<div class="no">NÃO</div>
+				<div class="yes">SIM</div>
+			</div>
+		</div>
+	</div>
 <div class="user"><?php echo $user;?></div>
 <!-- back to painel -->
 <a class="back" href="painel.php?user=<?php echo $user?>"></a>
@@ -46,9 +55,10 @@ $autenticado= $_GET['senha'];
 			<div class="inputagem"><label for="confdenovo" required><img src="img/olho.png"></label><input type="password" name="confdenovo" id="confdenovo" placeholder="Confirm New Password"/></div>
 			<button class="btlogin">Atualizar</button>
 		</form>
+		<div class="excluir"></div>
 	</div>
+	
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script type="text/javascript" src="js/progress.js"></script>
-
+<script type="text/javascript" src="js/update.js"></script>
 </html>

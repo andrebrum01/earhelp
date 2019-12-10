@@ -16,6 +16,6 @@ $(document).ready(function () {
 		$('#caixa2').css('visibility', 'hidden');
 		}
 	});
-
+	
 		
 });
