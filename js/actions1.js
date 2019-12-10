@@ -96,4 +96,16 @@ $(".go").click(function() {
 $(".fechar").click(function() {
 		$(".logar").fadeOut();
 });
-$(".logar").hide();
+var loc = $(location).attr('href');
+var i = loc.indexOf("?");
+var j = loc.indexOf("#");
+if(loc.length==i+1){
+	loc = loc.slice(0,i);
+	$(location).attr('href',loc);
+}
+else if(j!=-1){
+	loc = loc.slice(0,j);
+	$(location).attr('href',loc);
+}
+else if(i==-1)
+	$(".logar").hide();
