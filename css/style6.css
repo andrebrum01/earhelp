@@ -35,6 +35,9 @@ html{
 	--azuladao:#3de6af;
 }
 /*configs dos sections*/
+section{
+	overflow: hidden;
+}
 .first{
 	height: 95%;
 	width: 100%;
@@ -106,6 +109,7 @@ html{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	max-width: 70%;
 }
 .bannerSombraTop{
 	position: absolute;
@@ -515,6 +519,9 @@ div .prop span{
 }
 /*---------------responsvidade--------------*/
 @media only screen and (max-width: 800px){
+	html{
+		overflow-x: hidden;
+	}
 	.tiposDePerdas{
 		grid-template-rows: 1fr 1fr 1fr;
 		grid-template-columns: 1fr;

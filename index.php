@@ -223,7 +223,7 @@
 				<div id="caixa1">
 				<span id="palavra">login</span>
 				<form id="frm1"class="login" action="login.php" method="POST">
-					<!-- sucesso -->
+					<!-- suceszso -->
 					<?php
 						if(isset($_GET['criado'])){
 					?>
